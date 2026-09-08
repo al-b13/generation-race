@@ -1281,3 +1281,193 @@ body{
     background-position:50% 50% !important;
   }
 }
+
+
+/* ==========================================================
+   GR V11 — FULL PAGE VISUAL PASS
+   Studio / What We Do / Thinking + deploy-safe versioned assets
+   ========================================================== */
+
+/* Shared internal-page hero language */
+.inner-hero{
+  min-height:92svh;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(420px,.95fr);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.inner-hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:clamp(120px,14vw,210px) var(--gr-grid) clamp(64px,7vw,110px);
+}
+.inner-hero-copy h1{
+  font-size:clamp(60px,6.9vw,118px);
+  line-height:.88;
+  letter-spacing:-.065em;
+  max-width:10ch;
+}
+.inner-hero-copy em{
+  color:#81D8D0;
+  font-style:normal;
+}
+.inner-photo{
+  min-height:92svh;
+  background-size:cover !important;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.inner-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    linear-gradient(90deg,rgba(5,7,8,.20),rgba(5,7,8,.03) 42%),
+    linear-gradient(0deg,rgba(5,7,8,.38),transparent 42%);
+  pointer-events:none;
+}
+.inner-photo > *{position:relative;z-index:1}
+
+/* STUDIO */
+.photo-architecture{
+  background-image:url("/assets/images/studio/studio-v11.webp") !important;
+  background-position:52% 49% !important;
+}
+.studio-inner .inner-photo span{
+  left:8%;bottom:7%;
+  font-size:clamp(12px,1vw,18px);
+  line-height:1.2;
+  letter-spacing:.14em;
+}
+.statement{
+  padding-top:clamp(90px,10vw,160px);
+  padding-bottom:clamp(90px,10vw,160px);
+}
+.statement h2{
+  letter-spacing:-.055em;
+}
+.studio-process{
+  padding-top:clamp(90px,10vw,150px);
+  padding-bottom:clamp(90px,10vw,150px);
+}
+.process-grid article{
+  min-height:310px;
+  transition:transform .55s var(--gr-ease-out), background .4s ease;
+}
+@media(hover:hover){
+  .process-grid article:hover{transform:translateY(-6px)}
+}
+.network-photo{
+  background-image:url("/assets/images/studio/studio-v11.webp") !important;
+  background-position:72% 54% !important;
+}
+
+/* WHAT WE DO */
+.photo-track{
+  background-image:url("/assets/images/services/what-v11.webp") !important;
+  background-position:58% 48% !important;
+}
+.capability-page{
+  padding-top:clamp(90px,10vw,150px);
+  padding-bottom:clamp(90px,10vw,150px);
+}
+.cap-list article{
+  position:relative;
+  overflow:hidden;
+  transition:
+    transform .5s var(--gr-ease-out),
+    background-color .35s ease,
+    color .35s ease;
+}
+.cap-list article::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:3px;
+  background:#81D8D0;
+  transform:scaleY(0);
+  transform-origin:bottom;
+  transition:transform .45s var(--gr-ease-out);
+}
+@media(hover:hover){
+  .cap-list article:hover{
+    transform:translateX(8px);
+  }
+  .cap-list article:hover::before{
+    transform:scaleY(1);
+  }
+}
+.cap-highlight{
+  background:#81D8D0 !important;
+  color:#0b0d0e !important;
+}
+.cap-highlight small{color:rgba(11,13,14,.68) !important}
+
+/* THINKING */
+.photo-mountain{
+  background-image:url("/assets/images/thinking/thinking-v11.webp") !important;
+  background-position:48% 52% !important;
+}
+.thinking-editorial{
+  padding-top:clamp(90px,10vw,150px);
+  padding-bottom:clamp(90px,10vw,150px);
+}
+.editorial-img{
+  background-image:url("/assets/images/thinking/thinking-v11.webp") !important;
+  min-height:clamp(320px,36vw,520px);
+  background-size:cover !important;
+  filter:saturate(.72) contrast(1.06);
+}
+.editorial-cards article:nth-child(1) .editorial-img{background-position:32% 48% !important}
+.editorial-cards article:nth-child(2) .editorial-img{background-position:56% 46% !important}
+.editorial-cards article:nth-child(3) .editorial-img{background-position:78% 52% !important}
+.editorial-cards article{
+  transition:transform .55s var(--gr-ease-out);
+}
+@media(hover:hover){
+  .editorial-cards article:hover{transform:translateY(-7px)}
+}
+
+/* HOME previews now use the same upgraded visual language */
+.v4-studio-image{
+  background-image:
+    linear-gradient(180deg,rgba(5,7,8,.05),rgba(5,7,8,.20)),
+    url("/assets/images/home/studio-v11.webp") !important;
+  background-position:52% 48% !important;
+}
+.v4-thinking-grid .v4-think-img{
+  background-image:
+    linear-gradient(180deg,rgba(5,7,8,.05),rgba(5,7,8,.18)),
+    url("/assets/images/home/thinking-v11.webp") !important;
+}
+.v4-thinking-grid .v4-think:nth-child(1) .v4-think-img{background-position:30% 50% !important}
+.v4-thinking-grid .v4-think:nth-child(2) .v4-think-img{background-position:55% 48% !important}
+.v4-thinking-grid .v4-think:nth-child(3) .v4-think-img{background-position:78% 50% !important}
+
+/* Responsive */
+@media(max-width:900px){
+  .inner-hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+  .inner-hero-copy{
+    min-height:62svh;
+    padding-top:120px;
+  }
+  .inner-photo{
+    min-height:58svh;
+  }
+}
+@media(max-width:620px){
+  .inner-hero-copy h1{
+    font-size:14vw;
+  }
+  .inner-photo{
+    min-height:52svh;
+  }
+  .process-grid article{
+    min-height:240px;
+  }
+}
