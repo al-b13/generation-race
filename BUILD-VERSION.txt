@@ -1,4 +1,2 @@
 GENERATION RACE
-BUILD: V11 FULL VISUAL
-CSS: /css/styles-v11.css
-JS: /js/script-v11.js
+BUILD: V12 CLEAN
