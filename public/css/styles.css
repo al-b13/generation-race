@@ -675,3 +675,50 @@ a{text-decoration:none;color:inherit}
 .image-slot .mountain,
 .image-slot .silhouette,
 .image-slot .contact-arch{display:none!important}
+
+
+/* ===== V7.1 IMAGE RENDER FIX ===== */
+.v4-hero-visual.image-slot,
+.v4-studio-image.image-slot,
+.v4-think-img.image-slot{
+  background-image:
+    linear-gradient(180deg,rgba(7,10,11,.04),rgba(7,10,11,.30)),
+    var(--image) !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
+.v4-hero-visual.image-slot{background-position:55% 45% !important}
+.v4-studio-image.image-slot{background-position:50% 50% !important}
+.v4-think-img.image-slot{background-position:50% 50% !important}
+
+/* Hide provisional CSS artwork only where the real modular image is active */
+.v4-hero-visual.image-slot .v4-orbit,
+.v4-hero-visual.image-slot .v4-figure,
+.v4-studio-image.image-slot .v4-arch-a,
+.v4-studio-image.image-slot .v4-arch-b{
+  display:none !important;
+}
+
+/* Service photography appears as a restrained texture and never changes card dimensions */
+.service-image-card{
+  isolation:isolate;
+  overflow:hidden;
+}
+.service-image-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(11,13,14,.70),rgba(11,13,14,.93)),
+    var(--service-image);
+  background-size:cover;
+  background-position:center;
+  opacity:.42;
+  transition:opacity .25s ease, transform .35s ease;
+}
+.service-image-card:hover::before{opacity:.62;transform:scale(1.025)}
+.core-card.service-image-card::before{
+  opacity:.12;
+  mix-blend-mode:multiply;
+}

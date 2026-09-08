@@ -1,13 +1,16 @@
-# Generation Race V7 — Cloudflare Workers
+# Generation Race V7.1
 
-Production structure:
+Frontend correction on top of the approved Workers V7 structure
 
-- `wrangler.jsonc` = Cloudflare Workers configuration
-- `public/` = the ONLY folder published as static website assets
-- `public/assets/images/` = replaceable image library
+Changes:
+- Home image slots are now explicitly connected to the modular WEBP library
+- Thinking and service images are connected without changing layout geometry
+- Terminal full stops removed from visible website copy where they were not required
+- Cloudflare Workers configuration unchanged
+- `public/` remains the only deployed directory
 
-Cloudflare deploy command:
-`npx wrangler deploy`
-
-To change a photo:
-replace the corresponding WEBP inside `public/assets/images/`, then Commit + Push.
+Deploy workflow:
+1. Replace the contents of the local repository with this version
+2. GitHub Desktop: Commit to main
+3. Push origin
+4. Cloudflare Workers deploys automatically
