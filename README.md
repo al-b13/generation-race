@@ -1,16 +1,17 @@
-# Generation Race V7.1
+# Generation Race V7.2 — definitive image rendering fix
 
-Frontend correction on top of the approved Workers V7 structure
+What was fixed:
+- All image URLs are now root-absolute (`/assets/images/...`)
+- Main homepage images are bound directly in CSS, without depending on CSS custom-property URL resolution
+- Service and Thinking images are directly mapped by selector
+- Internal page visuals use direct absolute asset paths
+- Home wordmark is `GENERATION RACE` top-left
+- Internal pages retain `GENERATION RACE` top-right
+- Cloudflare Workers configuration remains unchanged
 
-Changes:
-- Home image slots are now explicitly connected to the modular WEBP library
-- Thinking and service images are connected without changing layout geometry
-- Terminal full stops removed from visible website copy where they were not required
-- Cloudflare Workers configuration unchanged
-- `public/` remains the only deployed directory
-
-Deploy workflow:
-1. Replace the contents of the local repository with this version
-2. GitHub Desktop: Commit to main
+Deploy:
+1. Replace local repo contents with this package
+2. Commit to main
 3. Push origin
-4. Cloudflare Workers deploys automatically
+4. Wait for Workers deployment success
+5. Open the site in a private/incognito window

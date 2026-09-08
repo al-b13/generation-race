@@ -722,3 +722,45 @@ a{text-decoration:none;color:inherit}
   opacity:.12;
   mix-blend-mode:multiply;
 }
+
+
+/* ===== V7.2 DEFINITIVE IMAGE PATH FIX =====
+   Root-absolute asset URLs, compatible with Cloudflare Workers Static Assets
+*/
+.v4-hero-visual.image-slot{
+  background-image:
+    linear-gradient(180deg,rgba(7,10,11,.04),rgba(7,10,11,.30)),
+    url("/assets/images/home/hero.webp") !important;
+}
+.v4-studio-image.image-slot{
+  background-image:
+    linear-gradient(180deg,rgba(7,10,11,.02),rgba(7,10,11,.20)),
+    url("/assets/images/home/studio.webp") !important;
+}
+.v4-thinking-grid .v4-think:nth-child(1) .v4-think-img{
+  background-image:linear-gradient(rgba(7,10,11,.04),rgba(7,10,11,.18)),url("/assets/images/thinking/untapped.webp") !important;
+}
+.v4-thinking-grid .v4-think:nth-child(2) .v4-think-img{
+  background-image:linear-gradient(rgba(7,10,11,.04),rgba(7,10,11,.18)),url("/assets/images/thinking/signals.webp") !important;
+}
+.v4-thinking-grid .v4-think:nth-child(3) .v4-think-img{
+  background-image:linear-gradient(rgba(7,10,11,.04),rgba(7,10,11,.18)),url("/assets/images/thinking/what-if.webp") !important;
+}
+.v4-service-card:nth-child(1)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/strategy.webp") !important}
+.v4-service-card:nth-child(2)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/sponsorship.webp") !important}
+.v4-service-card:nth-child(3)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.44),rgba(11,13,14,.78)),url("/assets/images/services/formats.webp") !important}
+.v4-service-card:nth-child(4)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/activation.webp") !important}
+.v4-service-card:nth-child(5)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/events.webp") !important}
+.v4-service-card:nth-child(6)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/content.webp") !important}
+.v4-service-card:nth-child(7)::before{background-image:linear-gradient(180deg,rgba(11,13,14,.62),rgba(11,13,14,.90)),url("/assets/images/services/business.webp") !important}
+.v4-wordmark{font-size:15px;letter-spacing:-.04em;font-weight:500;white-space:nowrap}
+
+/* Internal page direct bindings */
+.photo-architecture.image-slot{background-image:linear-gradient(rgba(7,10,11,.05),rgba(7,10,11,.25)),url("/assets/images/studio/hero.webp") !important}
+.network-photo.image-slot{background-image:linear-gradient(rgba(7,10,11,.05),rgba(7,10,11,.22)),url("/assets/images/studio/network.webp") !important}
+.photo-track.image-slot{background-image:linear-gradient(rgba(7,10,11,.05),rgba(7,10,11,.25)),url("/assets/images/services/formats.webp") !important}
+.photo-mountain.image-slot{background-image:linear-gradient(rgba(7,10,11,.05),rgba(7,10,11,.25)),url("/assets/images/thinking/untapped.webp") !important}
+.editorial-cards article:nth-child(1) .editorial-img{background-image:url("/assets/images/thinking/untapped.webp") !important}
+.editorial-cards article:nth-child(2) .editorial-img{background-image:url("/assets/images/thinking/signals.webp") !important}
+.editorial-cards article:nth-child(3) .editorial-img{background-image:url("/assets/images/thinking/what-if.webp") !important}
+.contact-right.image-slot{background-image:linear-gradient(rgba(7,10,11,.08),rgba(7,10,11,.30)),url("/assets/images/contact/hero.webp") !important}
