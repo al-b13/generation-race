@@ -1,19 +1,18 @@
-# Generation Race V9 — Visual Refinement
+# Generation Race V10 — Hero Art Direction
 
-Built on the stable V8 Motion / Cloudflare Workers architecture
+Built on V9 Visual + V8 Motion
 
-Refined:
-- Home hero hierarchy and cinematic crop
-- Photography rendering and focal points
-- Studio visual proportions
-- What We Do card image treatment
-- Formats & Properties visual emphasis
-- Thinking editorial crops
-- Contact spacing and hierarchy
-- Mobile/tablet visual behavior
-- Terminal full stops removed from visible copy
-- Existing motion system retained
-- Workers configuration unchanged
+Main changes
+- New higher-resolution photographic Hero built specifically for the existing right-side panel
+- Removed old abstract orbit/figure layers from Hero
+- Stronger crop and focal point around architecture, people and arena atmosphere
+- More editorial hero caption
+- Refined typography scale and balance
+- Mobile hero proportions adjusted
+- Existing site architecture, internal pages, animations and Workers configuration preserved
 
-This version intentionally keeps the current image library as replaceable placeholders
-The next photography pass can replace files one-by-one without changing the architecture
+Deploy
+1. Replace your local repository contents with this package
+2. Commit to main
+3. Push origin
+4. Cloudflare Workers will redeploy automatically

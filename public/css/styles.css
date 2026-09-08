@@ -1179,3 +1179,105 @@ body{
     min-height:auto;
   }
 }
+
+
+/* ==========================================================
+   GR V10 — HERO ART DIRECTION
+   New photographic hero + stronger editorial composition
+   ========================================================== */
+
+.v4-hero{
+  grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);
+}
+
+.v4-hero-copy{
+  background:
+    radial-gradient(circle at 88% 50%,rgba(129,216,208,.055),transparent 27%),
+    #0b0d0e;
+}
+
+.v4-hero h1{
+  font-size:clamp(64px,7.4vw,126px);
+  line-height:.86;
+  max-width:10.8ch;
+}
+
+.v4-hero-visual{
+  background-image:
+    linear-gradient(180deg,rgba(5,7,8,.06),rgba(5,7,8,.20)),
+    url("/assets/images/home/hero-v10.webp") !important;
+  background-size:cover !important;
+  background-position:52% 50% !important;
+  filter:saturate(.92) contrast(1.04);
+}
+
+.v4-hero-visual::after{
+  background:
+    linear-gradient(90deg,rgba(5,7,8,.30) 0%,rgba(5,7,8,.04) 32%,rgba(5,7,8,.04) 100%),
+    linear-gradient(0deg,rgba(5,7,8,.30) 0%,transparent 34%);
+}
+
+.v4-hero-caption{
+  left:7%;
+  bottom:5.5%;
+  padding:8px 10px 8px 0;
+  font-size:8px;
+  letter-spacing:.16em;
+  color:rgba(255,255,255,.82);
+  opacity:1;
+}
+
+.v4-hero-caption::before{
+  content:"";
+  display:inline-block;
+  width:28px;
+  height:1px;
+  background:#81D8D0;
+  margin-right:10px;
+  vertical-align:middle;
+}
+
+/* Cleaner connection between hero and Studio */
+.v4-studio{
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* More premium typography balance */
+.v4-kicker{
+  color:rgba(255,255,255,.72);
+}
+.v4-lead{
+  color:#c3c8c7;
+  max-width:560px;
+}
+.v4-pillars{
+  margin-top:38px;
+}
+
+/* Keep hero readable on smaller screens */
+@media(max-width:900px){
+  .v4-hero{
+    grid-template-columns:1fr;
+  }
+  .v4-hero-copy{
+    min-height:68svh;
+  }
+  .v4-hero-visual{
+    min-height:62svh;
+    background-position:50% 48% !important;
+  }
+}
+
+@media(max-width:620px){
+  .v4-hero h1{
+    font-size:15vw;
+    line-height:.88;
+  }
+  .v4-hero-copy{
+    min-height:66svh;
+  }
+  .v4-hero-visual{
+    min-height:58svh;
+    background-position:50% 50% !important;
+  }
+}
