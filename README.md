@@ -1,26 +1,19 @@
-# Generation Race V8 Motion
+# Generation Race V9 — Visual Refinement
 
-Base: V7.2 stable Cloudflare Workers build
+Built on the stable V8 Motion / Cloudflare Workers architecture
 
-Added:
-- Cinematic hero entrance
-- Scroll reveal system
-- Staggered service and Thinking cards
-- Subtle hero parallax
-- Premium hover motion
-- Tiffany motion signature
-- Animated ticker
-- Sticky header glass treatment on scroll
-- Reduced-motion accessibility support
-- Minor focal-point corrections for current placeholder images
+Refined:
+- Home hero hierarchy and cinematic crop
+- Photography rendering and focal points
+- Studio visual proportions
+- What We Do card image treatment
+- Formats & Properties visual emphasis
+- Thinking editorial crops
+- Contact spacing and hierarchy
+- Mobile/tablet visual behavior
+- Terminal full stops removed from visible copy
+- Existing motion system retained
+- Workers configuration unchanged
 
-No structural page changes
-No Cloudflare configuration changes
-All terminal full stops remain removed from visible copy
-
-Deploy:
-1. Replace your local repository files with this package
-2. Commit to main
-3. Push origin
-4. Wait for Cloudflare Workers deployment
-5. Open in an incognito window for a clean test
+This version intentionally keeps the current image library as replaceable placeholders
+The next photography pass can replace files one-by-one without changing the architecture

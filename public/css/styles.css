@@ -995,3 +995,187 @@ body::after{
   -webkit-backdrop-filter:blur(16px);
   border-bottom-color:rgba(255,255,255,.08);
 }
+
+
+/* ==========================================================
+   GR V9 — VISUAL REFINEMENT
+   Architecture preserved. Photography, rhythm and hierarchy refined.
+   ========================================================== */
+
+:root{
+  --gr-tiffany:#81D8D0;
+  --gr-black:#090b0c;
+  --gr-ink:#101314;
+  --gr-paper:#f1f0eb;
+  --gr-muted:#a7aaa8;
+  --gr-grid:clamp(22px,4vw,64px);
+}
+
+/* Sharper rendering and more editorial rhythm */
+body{
+  background:var(--gr-black);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+.v4-shell{padding-left:var(--gr-grid);padding-right:var(--gr-grid)}
+
+/* HOME HERO — more cinematic, less crop-dependent */
+.v4-hero{
+  min-height:100svh;
+}
+.v4-hero-visual{
+  background-size:cover !important;
+  background-position:58% 46% !important;
+  filter:saturate(.88) contrast(1.035);
+}
+.v4-hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(5,7,8,.36) 0%,rgba(5,7,8,.06) 44%,rgba(5,7,8,.08) 100%),
+    linear-gradient(0deg,rgba(5,7,8,.18),transparent 42%);
+}
+.v4-hero-copy{position:relative;z-index:2}
+.v4-hero h1{
+  max-width:11.5ch;
+  letter-spacing:-.065em;
+  line-height:.91;
+}
+.v4-hero-sub{
+  max-width:610px;
+  line-height:1.5;
+}
+.v4-wordmark{
+  letter-spacing:-.035em;
+  font-weight:600;
+}
+
+/* Studio */
+.v4-studio-image{
+  min-height:clamp(390px,56vw,760px);
+  background-position:50% 44% !important;
+  filter:saturate(.82) contrast(1.04);
+}
+.v4-studio-copy p{max-width:720px}
+
+/* Service cards: stronger image legibility and cleaner text hierarchy */
+.v4-services-grid{
+  gap:1px;
+}
+.v4-service-card{
+  min-height:clamp(300px,32vw,470px);
+  isolation:isolate;
+}
+.v4-service-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-size:cover !important;
+  background-position:center !important;
+  filter:saturate(.72) contrast(1.06);
+}
+.v4-service-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(7,9,10,.16) 0%,rgba(7,9,10,.78) 78%,rgba(7,9,10,.92) 100%);
+  transition:background .55s var(--gr-ease-out);
+}
+.v4-service-card:hover::after{
+  background:linear-gradient(180deg,rgba(7,9,10,.06) 0%,rgba(7,9,10,.66) 78%,rgba(7,9,10,.86) 100%);
+}
+.v4-service-card.core-card{
+  outline:1px solid rgba(129,216,208,.55);
+  outline-offset:-1px;
+}
+
+/* Thinking: consistent editorial crops */
+.v4-think-img{
+  aspect-ratio:4/3;
+  min-height:0 !important;
+  background-size:cover !important;
+  filter:saturate(.78) contrast(1.045);
+}
+.v4-thinking-grid .v4-think:nth-child(1) .v4-think-img{background-position:50% 42% !important}
+.v4-thinking-grid .v4-think:nth-child(2) .v4-think-img{background-position:50% 48% !important}
+.v4-thinking-grid .v4-think:nth-child(3) .v4-think-img{background-position:50% 45% !important}
+
+/* Tiffany band as brand punctuation */
+.v4-band{
+  overflow:hidden;
+}
+.v4-band-track{
+  white-space:nowrap;
+  width:max-content;
+}
+
+/* Contact close: more breathing room */
+.v4-contact{
+  min-height:72vh;
+}
+.v4-contact-main h2{
+  max-width:10ch;
+  letter-spacing:-.055em;
+}
+
+/* Internal pages inherit same photographic treatment */
+.photo-architecture,
+.network-photo,
+.photo-track,
+.photo-mountain,
+.contact-right,
+.editorial-img{
+  background-size:cover !important;
+  filter:saturate(.82) contrast(1.04);
+}
+.photo-architecture{background-position:50% 44% !important}
+.network-photo{background-position:50% 48% !important}
+.photo-track{background-position:50% 48% !important}
+.photo-mountain{background-position:50% 45% !important}
+.contact-right{background-position:50% 48% !important}
+
+/* Fine borders instead of heavy blocks */
+.v4-section-tag,
+.v4-eyebrow{
+  letter-spacing:.12em;
+}
+
+/* Responsive refinement */
+@media(max-width:900px){
+  .v4-hero{
+    min-height:auto;
+  }
+  .v4-hero-visual{
+    min-height:52svh;
+    background-position:62% 48% !important;
+  }
+  .v4-hero h1{
+    max-width:9.5ch;
+  }
+  .v4-studio-image{
+    min-height:58vw;
+  }
+  .v4-service-card{
+    min-height:360px;
+  }
+}
+@media(max-width:620px){
+  :root{--gr-grid:20px}
+  .v4-hero-visual{
+    min-height:48svh;
+    background-position:64% 48% !important;
+  }
+  .v4-service-card{
+    min-height:330px;
+  }
+  .v4-think-img{
+    aspect-ratio:5/4;
+  }
+  .v4-contact{
+    min-height:auto;
+  }
+}
