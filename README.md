@@ -1,24 +1,13 @@
-# Generation Race — V6 Modular
+# Generation Race V7 — Cloudflare Workers
 
-This is the working master of the website.
+Production structure:
 
-## Architecture
-HTML, CSS and JavaScript are separated from photography.
-All replaceable photography lives in `assets/images/`.
+- `wrangler.jsonc` = Cloudflare Workers configuration
+- `public/` = the ONLY folder published as static website assets
+- `public/assets/images/` = replaceable image library
 
-## Image workflow
-Replace an image file with another WEBP using the same filename.
-The layout, typography, spacing, overlays and responsive architecture remain untouched.
+Cloudflare deploy command:
+`npx wrangler deploy`
 
-See `IMAGE-MAP.txt` for the exact mapping.
-
-## Cloudflare / GitHub
-Upload the full contents of this folder to the root of the existing GitHub repository.
-Commit and push. Cloudflare Pages will redeploy automatically if Git integration is active.
-
-## Brand rules
-- Montserrat
-- Tiffany #81D8D0
-- black / warm white / concrete grey
-- GENERATION RACE top-left on Home
-- GENERATION RACE top-right on internal pages
+To change a photo:
+replace the corresponding WEBP inside `public/assets/images/`, then Commit + Push.
