@@ -1,16 +1,10 @@
-# Generation Race V12 Clean Build
+# Generation Race V13 — Art Direction
+Built directly on the verified V12 Clean base
 
-This build is rebuilt from scratch
-
-It does not inherit the previous accumulated CSS/HTML patches
-
-Files to expect in Cloudflare deploy:
-- /css/gr-v12.css
-- /js/gr-v12.js
-- /index.html
-- /studio.html
-- /what-we-do.html
-- /thinking.html
-- /contact.html
-
-Cloudflare Workers config remains unchanged and serves ./public
+Changes:
+- Studio becomes an editorial manifesto with a stronger four-step method
+- What We Do becomes a capability system with Formats & Properties as the core
+- Thinking becomes a real editorial platform with three distinct series
+- High-resolution visual master crops replace the weakest small imagery on internal editorial sections
+- Versioned frontend: /css/gr-v13.css and /js/gr-v13.js
+- Cloudflare Workers configuration unchanged
