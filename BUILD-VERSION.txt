@@ -1,4 +1,3 @@
 GENERATION RACE
-BUILD: V14 VISUAL IDENTITY
-BASE: V13 ART DIRECTION
-VISUALS: dedicated high-resolution crops for Home / Studio / What We Do / Thinking / Contact
+BUILD: V15 CONSOLIDATED
+BASE: V14 + verified V13 editorial structure

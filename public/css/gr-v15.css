@@ -102,3 +102,70 @@
   .thinking-hero-photo{background-position:54% 48% !important}
   .contact-photo{background-position:64% 50% !important}
 }
+
+/* =========================================================
+   GR V15 — CONSOLIDATED / VISUAL BALANCE
+   ========================================================= */
+
+/* Home: photograph supports the statement rather than competing with it */
+.home-hero{grid-template-columns:1.10fr .90fr}
+.home-hero .hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(8,10,11,.16),rgba(8,10,11,.02) 48%),
+    linear-gradient(0deg,rgba(8,10,11,.34),transparent 48%),
+    url("/assets/images/v14/home-hero.webp") !important;
+  background-position:58% 50% !important;
+}
+.home-hero .hero-copy{position:relative;z-index:2}
+
+/* What We Do: reduce visual aggression, keep athletic energy */
+.what-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(8,10,11,.22),transparent 48%),
+    linear-gradient(0deg,rgba(8,10,11,.25),transparent 52%),
+    url("/assets/images/v14/what-hero.webp") !important;
+  background-position:54% 42% !important;
+  filter:saturate(.82);
+}
+
+/* Studio remains architectural and clean */
+.studio-hero-photo{
+  background-position:62% 50% !important;
+  filter:saturate(.88) contrast(1.02);
+}
+
+/* Thinking can be more intimate, but keep editorial legibility */
+.thinking-hero-photo{
+  background-position:50% 48% !important;
+  filter:saturate(.80) contrast(1.03);
+}
+
+/* Contact is deliberately quieter */
+.contact-photo{
+  background-position:68% 50% !important;
+  filter:saturate(.86);
+}
+
+/* Stronger hierarchy on internal pages */
+.inner-copy .eyebrow{margin-bottom:28px}
+.v13-intro{border-bottom:1px solid #d3d4d0}
+.v13-cap.core{box-shadow:inset 0 1px 0 rgba(129,216,208,.45),inset 0 -1px 0 rgba(129,216,208,.45)}
+.v13-think{overflow:hidden}
+.v13-thinkimg{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+@media(hover:hover){.v13-think:hover .v13-thinkimg{transform:scale(1.018)}}
+
+/* Mobile: imagery becomes a deliberate second beat, not a cramped desktop crop */
+@media(max-width:980px){
+  .home-hero{grid-template-columns:1fr}
+  .home-hero .hero-photo{min-height:62svh;background-position:60% 50%!important}
+  .studio-hero-photo{background-position:66% 50%!important}
+  .what-hero-photo{background-position:52% 40%!important}
+  .thinking-hero-photo{background-position:52% 48%!important}
+  .contact-photo{background-position:70% 50%!important}
+}
+@media(max-width:620px){
+  .home-hero .hero-photo{min-height:54svh}
+  .v13-note{left:20px;bottom:20px}
+  .v13-two>h2{font-size:14vw}
+  .v13-think{padding:42px 0}
+}
