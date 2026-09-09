@@ -1,0 +1,5 @@
+about-us.html: PASS
+portfolio.html: PASS
+studio.html: PASS
+index.html: PASS
+Old 2026 footer strings: 0
