@@ -202,3 +202,47 @@
 
 /* GR V18 — curated IT / EN language switch */
 .lang-switch{display:flex;align-items:center;gap:6px;font:600 10px/1 Montserrat,sans-serif;letter-spacing:.14em;white-space:nowrap;margin-left:auto;margin-right:18px}.lang-switch button{appearance:none;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;padding:6px 2px;cursor:pointer;opacity:.42;transition:opacity .2s ease,color .2s ease}.lang-switch button:hover,.lang-switch button.active{opacity:1}.lang-switch button.active{color:#81d8d0}.lang-switch span{opacity:.28}.inner-header .lang-switch{margin-left:18px}@media(max-width:980px){.lang-switch{margin-left:auto;margin-right:12px;font-size:9px;gap:4px}}
+
+
+/* =========================================================
+   GR V19 — LANGUAGE REFINEMENT + CORE TAG LAYOUT
+   ========================================================= */
+
+/* Studio traits */
+.studio-traits{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.studio-traits i{
+  font-style:normal;
+  opacity:.42;
+}
+
+/* Formats & Properties: tags occupy the wide content area horizontally */
+.v16-capabilities .core .tag-row{
+  grid-column:2 / -1;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:8px;
+}
+.v16-capabilities .core .tag-row span{
+  display:inline-flex;
+  align-items:center;
+  width:auto;
+  white-space:nowrap;
+  padding:10px 15px;
+}
+
+@media(max-width:900px){
+  .v16-capabilities .core .tag-row{
+    grid-column:1;
+    margin-top:14px;
+  }
+}

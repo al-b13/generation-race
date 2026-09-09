@@ -1,0 +1,14 @@
+home_feminine_studio: PASS
+home_audience: PASS
+home_editorial_translation: PASS
+home_untapped: PASS
+home_create: PASS
+studio_traits: PASS
+studio_process_all: PASS
+about_copy: PASS
+business_dev_copy: PASS
+execution_copy: PASS
+contact_create: PASS
+horizontal_tags_css: PASS
+all_v19_assets: PASS
+footer_2023: PASS

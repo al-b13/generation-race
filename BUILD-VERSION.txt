@@ -1,4 +1,4 @@
 GENERATION RACE
-BUILD: V18 MULTILINGUAL
-LANGUAGES: EN / IT
-TRANSLATION: curated editorial copy, no machine translation
+BUILD: V19 LANGUAGE REFINE
+BASE: V18 MULTILINGUAL
+CHANGES: curated Italian corrections + Studio traits + horizontal Formats & Properties tags
