@@ -1,0 +1,10 @@
+404.html: switch=N/A | V18=PASS | translations=1
+about-us.html: switch=PASS | V18=PASS | translations=9
+contact.html: switch=PASS | V18=PASS | translations=9
+index.html: switch=PASS | V18=PASS | translations=29
+portfolio.html: switch=PASS | V18=PASS | translations=9
+studio.html: switch=PASS | V18=PASS | translations=19
+thinking.html: switch=PASS | V18=PASS | translations=17
+what-we-do.html: switch=PASS | V18=PASS | translations=16
+Footer 2026 occurrences: 0
+Language persistence: PASS

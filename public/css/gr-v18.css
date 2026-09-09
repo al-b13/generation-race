@@ -199,3 +199,6 @@
 .v17-project-grid>div{min-height:32vw;background:#111315;color:#f1efe8;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
 .v17-project-grid span{color:#81d8d0;font-size:12px}.v17-project-grid p{font-size:12px;letter-spacing:.14em}
 @media(max-width:900px){.v17-placeholder-grid,.v17-project-grid{grid-template-columns:1fr}.v17-project-grid>div{min-height:60vw}}
+
+/* GR V18 — curated IT / EN language switch */
+.lang-switch{display:flex;align-items:center;gap:6px;font:600 10px/1 Montserrat,sans-serif;letter-spacing:.14em;white-space:nowrap;margin-left:auto;margin-right:18px}.lang-switch button{appearance:none;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;padding:6px 2px;cursor:pointer;opacity:.42;transition:opacity .2s ease,color .2s ease}.lang-switch button:hover,.lang-switch button.active{opacity:1}.lang-switch button.active{color:#81d8d0}.lang-switch span{opacity:.28}.inner-header .lang-switch{margin-left:18px}@media(max-width:980px){.lang-switch{margin-left:auto;margin-right:12px;font-size:9px;gap:4px}}
