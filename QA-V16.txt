@@ -1,0 +1,10 @@
+studio.html: PASS
+what-we-do.html: PASS
+thinking.html: PASS
+css/gr-v16.css: PASS
+js/gr-v16.js: PASS
+assets/images/v14/home-hero.webp: PASS
+assets/images/v14/studio-hero.webp: PASS
+assets/images/v14/what-hero.webp: PASS
+assets/images/v14/thinking-hero.webp: PASS
+assets/images/v14/contact-hero.webp: PASS
