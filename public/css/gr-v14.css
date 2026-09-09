@@ -25,3 +25,80 @@
 .v13-thinking{padding-top:0}.v13-think{display:grid;grid-template-columns:1.08fr .92fr;min-height:640px;border-top:1px solid #c8cac6;padding:55px 0;gap:6vw;align-items:center}.v13-think.reverse{grid-template-columns:.92fr 1.08fr}.v13-think.reverse .v13-thinkimg{order:2}.v13-thinkimg{height:100%;min-height:520px;background:url("/assets/images/thinking/thinking-v11.webp") center/cover no-repeat;filter:saturate(.72) contrast(1.05)}.v13-thinkimg.a{background-position:28% 50%}.v13-thinkimg.b{background-position:55% 48%}.v13-thinkimg.c{background-position:78% 50%}.v13-think h2{font-size:clamp(42px,5.5vw,82px);line-height:.9;letter-spacing:-.055em;margin:24px 0}.v13-think h3{font-size:22px;line-height:1.2;margin:0 0 25px}.v13-think p{font-size:14px;line-height:1.65;color:#5e6462;max-width:500px}.v13-think b{display:block;margin-top:42px}
 @media(max-width:900px){.v13-two,.v13-network,.v13-think,.v13-think.reverse{grid-template-columns:1fr}.v13-think.reverse .v13-thinkimg{order:0}.v13-networkimg{min-height:520px}.v13-stack article{grid-template-columns:48px 1fr}.v13-stack article p,.v13-stack article b{grid-column:2}.v13-cap{grid-template-columns:48px 1fr}.v13-cap>b{grid-column:2}}
 @media(max-width:620px){.v13-intro,.v13-method,.v13-network,.v13-caps,.v13-thinking,.v13-close{padding-left:20px;padding-right:20px}.v13-methodhead{display:block}.v13-methodhead p{margin-top:20px}.v13-networkimg,.v13-thinkimg{min-height:420px}.v13-cap.core{margin:0 -20px;padding:55px 20px}.v13-bottom{flex-wrap:wrap;gap:12px}}
+
+
+/* =========================================================
+   GENERATION RACE V14 — PHOTOGRAPHIC IDENTITY
+   Visual masters built for the actual site containers
+   ========================================================= */
+.home-hero .hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.05),rgba(6,8,9,.02)),
+    linear-gradient(0deg,rgba(6,8,9,.30),transparent 40%),
+    url("/assets/images/v14/home-hero.webp") !important;
+  background-position:54% 50% !important;
+}
+.studio-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.16),transparent 40%),
+    url("/assets/images/v14/studio-hero.webp") !important;
+  background-position:60% 50% !important;
+}
+.what-hero-photo{
+  background-image:
+    linear-gradient(0deg,rgba(6,8,9,.18),transparent 42%),
+    url("/assets/images/v14/what-hero.webp") !important;
+  background-position:50% 44% !important;
+}
+.thinking-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.10),transparent 38%),
+    url("/assets/images/v14/thinking-hero.webp") !important;
+  background-position:52% 48% !important;
+}
+.contact-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.18),transparent 42%),
+    url("/assets/images/v14/contact-hero.webp") !important;
+  background-position:64% 50% !important;
+}
+.v13-networkimg{
+  background-image:url("/assets/images/v14/studio-network.webp") !important;
+  background-position:56% 50% !important;
+}
+.v13-thinkimg.a{
+  background-image:url("/assets/images/v14/thinking-1.webp") !important;
+  background-position:46% 50% !important;
+}
+.v13-thinkimg.b{
+  background-image:url("/assets/images/v14/thinking-2.webp") !important;
+  background-position:50% 50% !important;
+}
+.v13-thinkimg.c{
+  background-image:url("/assets/images/v14/thinking-3.webp") !important;
+  background-position:56% 50% !important;
+}
+
+/* Home preview visual language aligned to the new masters */
+.studio-photo{
+  background-image:
+    linear-gradient(0deg,rgba(7,9,10,.10),transparent 45%),
+    url("/assets/images/v14/studio-hero.webp") !important;
+  background-position:58% 50% !important;
+}
+.thinking-image.untapped{
+  background-image:url("/assets/images/v14/thinking-1.webp") !important;
+}
+.thinking-image.signals{
+  background-image:url("/assets/images/v14/thinking-2.webp") !important;
+}
+.thinking-image.whatif{
+  background-image:url("/assets/images/v14/thinking-3.webp") !important;
+}
+@media(max-width:980px){
+  .home-hero .hero-photo{background-position:58% 50% !important}
+  .studio-hero-photo{background-position:62% 50% !important}
+  .what-hero-photo{background-position:50% 44% !important}
+  .thinking-hero-photo{background-position:54% 48% !important}
+  .contact-photo{background-position:64% 50% !important}
+}
