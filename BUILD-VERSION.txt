@@ -1,4 +1,3 @@
 GENERATION RACE
-BUILD: V20 NAVIGATION
-BASE: V19
-Removed MENU / reordered page numbers / mobile horizontal navigation
+BUILD: V21 MOBILE NAV FIX
+Fix: removed all MENU button variants; normalized nav class on every page; forced mobile horizontal navigation on Home, Contact and internal pages.
