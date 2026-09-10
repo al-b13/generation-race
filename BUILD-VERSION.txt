@@ -1,4 +1,4 @@
 GENERATION RACE
-BUILD: V19 LANGUAGE REFINE
-BASE: V18 MULTILINGUAL
-CHANGES: curated Italian corrections + Studio traits + horizontal Formats & Properties tags
+BUILD: V20 NAVIGATION
+BASE: V19
+Removed MENU / reordered page numbers / mobile horizontal navigation

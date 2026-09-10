@@ -1,0 +1,11 @@
+studio.html_number: PASS
+about-us.html_number: PASS
+portfolio.html_number: PASS
+what-we-do.html_number: PASS
+thinking.html_number: PASS
+contact.html_number: PASS
+menu_removed: PASS
+mobile_nav: PASS
+v20_assets: PASS
+it_en_preserved: PASS
+footer_2023: PASS
