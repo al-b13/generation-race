@@ -1,0 +1,6 @@
+seven_photos_created: PASS
+all_3x4: PASS
+css_has_all_7: PASS
+mobile_framing_rules: PASS
+v22_assets_all_pages: PASS
+no_text_baked_into_photos: PASS

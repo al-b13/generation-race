@@ -365,3 +365,49 @@
     display:block!important;
   }
 }
+
+
+/* =========================================================
+   GR V22 — SERVICE PHOTOGRAPHY
+   Approved individual visual system for the 7 Home service cards
+   ========================================================= */
+
+.service-card.strategy:before{
+  background-image:url("/assets/images/services/v22/strategy.webp");
+  background-position:50% 50%;
+}
+.service-card.sponsorship:before{
+  background-image:url("/assets/images/services/v22/sponsorship.webp");
+  background-position:50% 48%;
+}
+.service-card.formats:before{
+  background-image:url("/assets/images/services/v22/formats.webp");
+  background-position:50% 50%;
+}
+.service-card.activation:before{
+  background-image:url("/assets/images/services/v22/activation.webp");
+  background-position:50% 50%;
+}
+.service-card.events:before{
+  background-image:url("/assets/images/services/v22/events.webp");
+  background-position:50% 48%;
+}
+.service-card.content:before{
+  background-image:url("/assets/images/services/v22/content.webp");
+  background-position:50% 50%;
+}
+.service-card.business:before{
+  background-image:url("/assets/images/services/v22/business.webp");
+  background-position:55% 50%;
+}
+
+/* Mobile cards become wider than desktop. Keep the important visual action in frame. */
+@media(max-width:620px){
+  .service-card.strategy:before{background-position:50% 44%}
+  .service-card.sponsorship:before{background-position:50% 44%}
+  .service-card.formats:before{background-position:50% 50%}
+  .service-card.activation:before{background-position:50% 46%}
+  .service-card.events:before{background-position:50% 42%}
+  .service-card.content:before{background-position:50% 48%}
+  .service-card.business:before{background-position:55% 50%}
+}

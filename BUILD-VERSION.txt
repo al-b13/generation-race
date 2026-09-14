@@ -1,3 +1,4 @@
 GENERATION RACE
-BUILD: V21 MOBILE NAV FIX
-Fix: removed all MENU button variants; normalized nav class on every page; forced mobile horizontal navigation on Home, Contact and internal pages.
+BUILD: V22 SERVICE PHOTOGRAPHY
+BASE: V21
+7 approved service visuals separated into individual 3:4 WebP files, with desktop/mobile crop positioning calibrated in CSS.
