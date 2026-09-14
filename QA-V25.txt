@@ -1,0 +1,7 @@
+thinking_untapped_new: PASS
+thinking_signals_new: PASS
+thinking_whatif_new: PASS
+thinking_cards_still_4x3: PASS
+first_thinking_photo_untouched: PASS
+home_images_still_present: PASS
+v25_loaded: PASS

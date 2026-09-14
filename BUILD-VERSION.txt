@@ -1,3 +1,4 @@
 GENERATION RACE
-BUILD: V24 HOME THINKING OVERRIDE FIX
-Cause fixed: legacy V14 !important background-image declarations were overriding V23 images.
+BUILD: V25 THINKING PHOTOGRAPHY
+BASE: V24
+Thinking hero/first photo unchanged. UNTAPPED, SIGNALS and WHAT IF now reuse the approved Home 4:3 images (1200x900).

@@ -455,3 +455,27 @@ body .thinking-image.whatif{
   body .thinking-image.signals{background-position:50% 42% !important}
   body .thinking-image.whatif{background-position:50% 48% !important}
 }
+
+
+/* =========================================================
+   GR V25 — THINKING PAGE PHOTOGRAPHY
+   Same approved 4:3 imagery as Home; hero/first photo untouched
+   ========================================================= */
+body .editorial-image.untapped{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 50% !important;
+}
+body .editorial-image.signals{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 44% !important;
+}
+body .editorial-image.whatif{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+}
+
+@media(max-width:700px){
+  body .editorial-image.untapped{background-position:50% 48% !important}
+  body .editorial-image.signals{background-position:50% 42% !important}
+  body .editorial-image.whatif{background-position:50% 48% !important}
+}
