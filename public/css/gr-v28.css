@@ -522,3 +522,71 @@ body .editorial-image.whatif{
 .founder-manifesto{font-size:clamp(25px,3vw,42px);line-height:1.08;letter-spacing:-.03em;margin:50px 0 34px;max-width:760px}
 .founder-tags{display:flex;flex-wrap:wrap;gap:8px}.founder-tags span{border:1px solid currentColor;border-radius:999px;padding:9px 13px;font-size:10px;letter-spacing:.08em;white-space:nowrap}
 @media(max-width:900px){.about-hero-photo{background-position:58% 50%!important}.founder-profile{grid-template-columns:1fr;gap:42px;padding:70px 20px 80px}.founder-photo{max-height:78svh;background-position:center 38%}.founder-copy h2{font-size:clamp(52px,14vw,82px)}.founder-role{margin-bottom:34px}}
+
+/* =========================================================
+   GR V28 — PORTFOLIO PROJECT GRID
+   ========================================================= */
+.portfolio-intro{
+  padding:8vw 5vw 6vw;
+  background:#f2f0e9;
+  color:#0a0b0c;
+  border-bottom:1px solid rgba(0,0,0,.18)
+}
+.portfolio-intro h2{
+  font-size:clamp(60px,8.8vw,142px);
+  line-height:.84;
+  letter-spacing:-.06em;
+  margin:24px 0 34px
+}
+.portfolio-lead{max-width:620px;font-size:18px;line-height:1.55;color:#4b504e}
+.project-grid{background:#0a0b0c}
+.project-card{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
+  min-height:78svh;
+  border-bottom:1px solid rgba(255,255,255,.16)
+}
+.project-card:nth-child(even){grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr)}
+.project-card:nth-child(even) .project-visual{order:2}
+.project-card:nth-child(even) .project-info{order:1}
+.project-visual{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden
+}
+.project-strikers .project-visual{background:#070809;padding:8vw}
+.project-strikers .project-visual img{width:min(90%,850px);height:auto;object-fit:contain}
+.project-352 .project-visual{background:#ef7300;padding:0}
+.project-352 .project-visual img{width:100%;height:100%;object-fit:cover}
+.project-info{
+  padding:6vw 5vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:#f2f0e9;
+  color:#0a0b0c
+}
+.project-number{font-size:12px;letter-spacing:.12em;margin:0 0 20px}
+.project-tags{
+  max-width:660px;
+  font-size:11px;
+  line-height:1.55;
+  letter-spacing:.08em;
+  padding:14px 0;
+  border-top:1px solid rgba(0,0,0,.28);
+  border-bottom:1px solid rgba(0,0,0,.28);
+  margin-bottom:34px
+}
+.project-info>p:last-child{max-width:680px;font-size:18px;line-height:1.6;margin:0;color:#3f4543}
+@media(max-width:900px){
+  .portfolio-intro{padding:80px 20px 65px}
+  .portfolio-intro h2{font-size:clamp(55px,16vw,92px)}
+  .project-card,.project-card:nth-child(even){grid-template-columns:1fr;min-height:auto}
+  .project-card:nth-child(even) .project-visual,.project-card:nth-child(even) .project-info{order:initial}
+  .project-visual{min-height:56svh}
+  .project-strikers .project-visual{padding:70px 28px}
+  .project-info{padding:55px 20px 70px}
+  .project-info>p:last-child{font-size:16px}
+}
