@@ -432,3 +432,26 @@
   .thinking-image.signals{background-position:50% 42%}
   .thinking-image.whatif{background-position:50% 48%}
 }
+
+
+/* =========================================================
+   GR V24 — DEFINITIVE HOME THINKING IMAGE OVERRIDE
+   Must remain last: supersedes legacy V14 !important rules
+   ========================================================= */
+body .thinking-image.untapped{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 50% !important;
+}
+body .thinking-image.signals{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 44% !important;
+}
+body .thinking-image.whatif{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+}
+@media(max-width:700px){
+  body .thinking-image.untapped{background-position:50% 48% !important}
+  body .thinking-image.signals{background-position:50% 42% !important}
+  body .thinking-image.whatif{background-position:50% 48% !important}
+}
