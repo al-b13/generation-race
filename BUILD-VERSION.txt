@@ -1,4 +1,6 @@
 GENERATION RACE
-BUILD: V28 PORTFOLIO PROJECT GRID
-BASE: V27
-PROJECTS: STRIKERS / 352 SPORT
+BUILD: V29 VISUAL REFINEMENTS
+BASE: V28
+- Home Tiffany point-of-view label
+- Smaller Portfolio logos
+- New Studio second image with desktop/tablet/mobile crops

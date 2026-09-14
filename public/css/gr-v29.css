@@ -590,3 +590,78 @@ body .editorial-image.whatif{
   .project-info{padding:55px 20px 70px}
   .project-info>p:last-child{font-size:16px}
 }
+
+
+/* =========================================================
+   GR V29 — FINAL VISUAL REFINEMENTS
+   ========================================================= */
+
+/* HOME — keep black band, make label legible in GR Tiffany */
+.studio-preview .eyebrow.dark{
+  background:#0a0b0c !important;
+  color:#81D8D0 !important;
+}
+
+/* PORTFOLIO — more breathing room around project identities */
+.project-strikers .project-visual{
+  padding:10vw !important;
+}
+.project-strikers .project-visual img{
+  width:min(68%,650px) !important;
+  max-height:48% !important;
+  object-fit:contain !important;
+}
+.project-352 .project-visual{
+  padding:8% !important;
+  background:#ef7300 !important;
+}
+.project-352 .project-visual img{
+  width:72% !important;
+  height:72% !important;
+  object-fit:contain !important;
+}
+
+/* STUDIO — second image only. First/hero image intentionally unchanged.
+   Desktop focal point keeps moodboard + Turin window balanced. */
+.v16-network .v13-networkimg{
+  background-image:url("/assets/images/studio/v29/studio-network.webp") !important;
+  background-size:cover !important;
+  background-position:54% 50% !important;
+  filter:saturate(.78) contrast(1.04);
+}
+
+/* Tablet crop: retain central strategy wall and part of skyline */
+@media(max-width:980px){
+  .v16-network .v13-networkimg{
+    min-height:560px;
+    background-position:58% 50% !important;
+  }
+  .project-strikers .project-visual{padding:90px 44px !important}
+  .project-strikers .project-visual img{width:min(72%,600px) !important;max-height:none !important}
+  .project-352 .project-visual{padding:9% !important}
+  .project-352 .project-visual img{width:70% !important;height:70% !important}
+}
+
+/* Mobile crop: portrait-like viewport, prioritize moodboard/desk rather than empty window */
+@media(max-width:620px){
+  .v16-network .v13-networkimg{
+    min-height:480px !important;
+    background-position:42% 50% !important;
+  }
+  .project-strikers .project-visual{
+    min-height:48svh !important;
+    padding:72px 34px !important;
+  }
+  .project-strikers .project-visual img{
+    width:74% !important;
+    max-width:500px !important;
+  }
+  .project-352 .project-visual{
+    min-height:52svh !important;
+    padding:12% !important;
+  }
+  .project-352 .project-visual img{
+    width:72% !important;
+    height:72% !important;
+  }
+}

@@ -1,0 +1,12 @@
+home_actual_selector_exists: PASS
+home_tiffany_override: PASS
+studio_actual_second_image_class: PASS
+studio_new_image_targeted: PASS
+studio_hero_unchanged: PASS
+studio_desktop_crop: PASS
+studio_mobile_crop: PASS
+portfolio_strikers_actual: PASS
+portfolio_352_actual: PASS
+strikers_reduced: PASS
+352_reduced: PASS
+v29_loaded: PASS
