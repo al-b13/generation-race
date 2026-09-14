@@ -1,0 +1,7 @@
+3_home_images_created: PASS
+exact_4x3_1200x900: PASS
+home_uses_new_untapped: PASS
+home_uses_new_signals: PASS
+home_uses_new_whatif: PASS
+thinking_page_assets_preserved: PASS
+v23_assets_all_pages: PASS

@@ -1,4 +1,4 @@
 GENERATION RACE
-BUILD: V22 SERVICE PHOTOGRAPHY
-BASE: V21
-7 approved service visuals separated into individual 3:4 WebP files, with desktop/mobile crop positioning calibrated in CSS.
+BUILD: V23 HOME THINKING PHOTOGRAPHY
+BASE: V22
+Home GR / UNTAPPED, GR / SIGNALS and GR / WHAT IF updated with approved photography. Images are individual 4:3 WebP crops. Thinking page imagery remains unchanged.
