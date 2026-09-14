@@ -1,4 +1,3 @@
 GENERATION RACE
-BUILD: V30 PORTFOLIO HERO
-BASE: V29
-Dedicated Portfolio hero with desktop/tablet/mobile art-directed crops.
+BUILD: V31 PORTFOLIO HERO HARD FIX
+Portfolio hero changed from CSS background to responsive picture element + cache busting.
