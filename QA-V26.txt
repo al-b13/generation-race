@@ -1,0 +1,8 @@
+actual_untapped_class_exists: PASS
+actual_signals_class_exists: PASS
+actual_whatif_class_exists: PASS
+untapped_correctly_targeted: PASS
+signals_correctly_targeted: PASS
+whatif_correctly_targeted: PASS
+hero_unchanged: PASS
+v26_loaded: PASS

@@ -1,4 +1,4 @@
 GENERATION RACE
-BUILD: V25 THINKING PHOTOGRAPHY
-BASE: V24
-Thinking hero/first photo unchanged. UNTAPPED, SIGNALS and WHAT IF now reuse the approved Home 4:3 images (1200x900).
+BUILD: V26 THINKING PHOTOGRAPHY FIX
+BASE: V25
+Corrected actual Thinking selectors (.v13-thinkimg a/b/c). Hero remains untouched; the three editorial images now reuse Home photography.

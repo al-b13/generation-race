@@ -479,3 +479,36 @@ body .editorial-image.whatif{
   body .editorial-image.signals{background-position:50% 42% !important}
   body .editorial-image.whatif{background-position:50% 48% !important}
 }
+
+
+/* =========================================================
+   GR V26 — THINKING PAGE / CORRECT IMAGE TARGETS
+   Actual page classes: .v13-thinkimg.a / .b / .c
+   Hero photo remains untouched.
+   ========================================================= */
+
+.v16-thinking .v13-thinkimg.a{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 48% !important;
+  background-size:cover !important;
+}
+
+.v16-thinking .v13-thinkimg.b{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 42% !important;
+  background-size:cover !important;
+}
+
+.v16-thinking .v13-thinkimg.c{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+  background-size:cover !important;
+}
+
+/* Tablet/mobile: the image block becomes full-width and shorter.
+   Recenter on the meaningful visual action. */
+@media(max-width:900px){
+  .v16-thinking .v13-thinkimg.a{background-position:50% 50% !important}
+  .v16-thinking .v13-thinkimg.b{background-position:50% 44% !important}
+  .v16-thinking .v13-thinkimg.c{background-position:50% 48% !important}
+}
