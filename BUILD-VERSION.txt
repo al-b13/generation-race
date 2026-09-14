@@ -1,4 +1,3 @@
 GENERATION RACE
-BUILD: V26 THINKING PHOTOGRAPHY FIX
-BASE: V25
-Corrected actual Thinking selectors (.v13-thinkimg a/b/c). Hero remains untouched; the three editorial images now reuse Home photography.
+BUILD: V27 ABOUT US + FOUNDER
+BASE: V26

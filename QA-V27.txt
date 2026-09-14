@@ -1,0 +1,7 @@
+hero: PASS
+portrait: PASS
+hero_class: PASS
+founder: PASS
+no_placeholder: PASS
+it_bio: PASS
+v27: PASS
