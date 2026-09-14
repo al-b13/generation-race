@@ -1,0 +1,12 @@
+dedicated_portfolio_selector: PASS
+old_shared_selector_removed: PASS
+desktop_asset: PASS
+tablet_asset: PASS
+mobile_asset: PASS
+desktop_crop_size: PASS
+tablet_crop_size: PASS
+mobile_crop_size: PASS
+desktop_css: PASS
+tablet_css: PASS
+mobile_css: PASS
+v30_loaded: PASS

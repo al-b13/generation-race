@@ -1,6 +1,4 @@
 GENERATION RACE
-BUILD: V29 VISUAL REFINEMENTS
-BASE: V28
-- Home Tiffany point-of-view label
-- Smaller Portfolio logos
-- New Studio second image with desktop/tablet/mobile crops
+BUILD: V30 PORTFOLIO HERO
+BASE: V29
+Dedicated Portfolio hero with desktop/tablet/mobile art-directed crops.
