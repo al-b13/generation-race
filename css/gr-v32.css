@@ -1,0 +1,753 @@
+
+:root{--black:#0b0d0e;--ink:#111416;--paper:#f0efe9;--tiffany:#81d8d0;--line:rgba(255,255,255,.12);--pad:clamp(22px,4.5vw,72px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Montserrat,Arial,sans-serif;background:var(--black);color:#fff;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%}
+.site-header{position:fixed;inset:0 0 auto;z-index:50;height:82px;display:flex;align-items:center;padding:0 var(--pad);background:linear-gradient(180deg,rgba(9,11,12,.58),transparent);transition:.3s}.site-header.scrolled{background:rgba(9,11,12,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}.brand{font-weight:600;letter-spacing:-.03em}.brand-home{font-size:15px}.brand-mark{font-size:17px}.brand-right{margin-left:auto;font-size:13px}.site-header nav{margin-left:auto;display:flex;gap:34px;font-size:12px}.inner-header nav{margin-left:auto;margin-right:38px}.menu-btn{display:none;background:none;border:0;color:white;font:inherit}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.02fr .98fr}.hero-copy{padding:170px var(--pad) 70px;display:flex;flex-direction:column;justify-content:flex-end;background:radial-gradient(circle at 90% 52%,rgba(129,216,208,.06),transparent 30%),var(--black)}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:34px}.eyebrow.dark{color:#444}.hero h1,.inner-copy h1,.contact-page h1{font-size:clamp(62px,7.2vw,124px);line-height:.88;letter-spacing:-.065em;margin:0;max-width:10.5ch}.hero-copy p{font-size:clamp(16px,1.25vw,21px);line-height:1.48;max-width:620px;color:#c8cdcc;margin:34px 0}.pillars{font-size:11px;letter-spacing:.16em;border-top:1px solid rgba(255,255,255,.35);padding-top:16px;width:max-content}.hero-photo{position:relative;background:url("/assets/images/home/hero-v10.webp") center/cover no-repeat;min-height:100svh}.hero-photo:after,.inner-photo:after,.contact-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,8,.20),transparent 38%),linear-gradient(0deg,rgba(5,7,8,.28),transparent 35%)}
+.section{padding:110px var(--pad)}.section-index{font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:55px}.split{display:grid;grid-template-columns:1fr 1.08fr;gap:7vw;align-items:center}.studio-preview{background:var(--paper);color:var(--ink)}.studio-preview h2,.section-head h2,.statement h2,.network h2{font-size:clamp(44px,5.2vw,86px);line-height:.94;letter-spacing:-.055em;margin:0 0 30px}.studio-preview p{font-size:17px;line-height:1.6;max-width:650px}.photo{background-size:cover;background-position:center}.studio-photo{min-height:680px;background:url("/assets/images/home/studio-v11.webp") 52% 48%/cover no-repeat}.text-link{display:inline-block;margin-top:30px;font-size:12px;letter-spacing:.12em}
+.services{background:#111416}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:55px}.section-head h2{max-width:10ch}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}.service-card{position:relative;min-height:410px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate;background:#171b1c}.service-card:before{content:"";position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;filter:saturate(.72) contrast(1.05);transition:transform .7s}.service-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,7,8,.1),rgba(5,7,8,.9))}.service-card:hover:before{transform:scale(1.05)}.service-card span{font-size:11px;letter-spacing:.14em}.service-card h3{font-size:24px;letter-spacing:-.035em;margin:16px 0 8px}.service-card p{font-size:13px;line-height:1.45;color:#d3d6d5}.service-card b{position:absolute;right:24px;top:22px}.service-card.strategy:before{background-image:url("/assets/images/services/strategy.webp")}.service-card.sponsorship:before{background-image:url("/assets/images/services/sponsorship.webp")}.service-card.formats:before{background-image:url("/assets/images/services/formats.webp")}.service-card.activation:before{background-image:url("/assets/images/services/activation.webp")}.service-card.events:before{background-image:url("/assets/images/services/events.webp")}.service-card.content:before{background-image:url("/assets/images/services/content.webp")}.service-card.business:before{background-image:url("/assets/images/services/business.webp")}.service-card.core{outline:1px solid var(--tiffany);outline-offset:-1px}
+.ticker{overflow:hidden;background:var(--tiffany);color:#0b0d0e;padding:18px 0;font-weight:600;letter-spacing:.08em}.ticker div{width:max-content;white-space:nowrap;animation:ticker 24s linear infinite}@keyframes ticker{to{transform:translateX(-50%)}}
+.thinking-preview{background:var(--paper);color:var(--ink)}.thinking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.thinking-card{display:block}.thinking-image{aspect-ratio:4/3;background-size:cover;background-position:center;margin-bottom:22px;transition:transform .6s}.thinking-card:hover .thinking-image{transform:scale(.985)}.thinking-image.untapped{background-image:url("/assets/images/home-thinking/v23/untapped.webp")}.editorial-image.untapped{background-image:url("/assets/images/thinking/untapped.webp")}.thinking-image.signals{background-image:url("/assets/images/home-thinking/v23/signals.webp")}.editorial-image.signals{background-image:url("/assets/images/thinking/signals.webp")}.thinking-image.whatif{background-image:url("/assets/images/home-thinking/v23/what-if.webp")}.editorial-image.whatif{background-image:url("/assets/images/thinking/what-if.webp")}.thinking-card span{font-size:11px;letter-spacing:.14em}.thinking-card h3{font-size:22px;margin:14px 0 7px}.thinking-card p{margin:0;color:#515656}
+.contact-cta{padding:120px var(--pad);min-height:72vh;background:#0b0d0e;display:flex;flex-direction:column;justify-content:space-between}.contact-cta h2{font-size:clamp(54px,7vw,112px);line-height:.9;letter-spacing:-.06em;max-width:9.5ch;margin:0 0 30px}.contact-cta p{color:#bec3c2;line-height:1.6}.contact-cta a{display:inline-block;margin-top:26px;font-size:20px;color:var(--tiffany)}
+.site-footer{padding:50px var(--pad);border-top:1px solid rgba(255,255,255,.09);display:grid;grid-template-columns:1fr 1fr auto;gap:30px;align-items:end}.footer-brand{font-size:34px}.footer-copy,.footer-meta{font-size:10px;letter-spacing:.13em;line-height:1.5}.site-footer nav{display:flex;gap:22px;font-size:11px}.footer-meta{grid-column:1/-1;color:#777}
+.inner-hero{min-height:92svh;display:grid;grid-template-columns:1.02fr .98fr}.inner-copy{padding:170px var(--pad) 70px;display:flex;flex-direction:column;justify-content:flex-end}.inner-copy h1{font-size:clamp(58px,6.4vw,108px)}.inner-copy p{font-size:18px;color:#c6cbca;max-width:570px}.inner-photo{position:relative;min-height:92svh;background-size:cover;background-position:center}.studio-hero-photo{background-image:url("/assets/images/studio/studio-v11.webp")}.what-hero-photo{background-image:url("/assets/images/services/what-v11.webp")}.thinking-hero-photo{background-image:url("/assets/images/thinking/thinking-v11.webp")}
+.light{background:var(--paper);color:var(--ink)}.dark{background:#111416}.statement,.process,.network,.capabilities,.editorial{padding:110px var(--pad)}.statement h3{font-size:clamp(32px,4vw,62px);font-weight:500;color:#737776}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.09)}.process article{padding:28px;min-height:310px;background:#141819;display:flex;flex-direction:column;justify-content:flex-end}.process article span,.cap-row span,.editorial-card span{font-size:11px;letter-spacing:.14em}.process article h3{font-size:28px;margin:14px 0}.process article p{color:#b7bcbb;line-height:1.5}.network{display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center}.network-photo{min-height:650px;background:url("/assets/images/studio/network.webp") center/cover no-repeat}.capabilities{padding-top:0}.cap-row{display:grid;grid-template-columns:80px 1fr;gap:30px;padding:48px 0;border-bottom:1px solid #cacbc7;transition:.35s}.cap-row:hover{padding-left:10px}.cap-row h2{font-size:clamp(34px,4.5vw,72px);letter-spacing:-.05em;margin:0 0 12px}.cap-row p{max-width:760px;line-height:1.6;color:#515656}.cap-row.highlight{background:var(--tiffany);margin:0 calc(var(--pad)*-1);padding-left:var(--pad);padding-right:var(--pad);border:0}.cap-row.highlight p{color:#1c2323}.micro{font-size:12px;letter-spacing:.08em}.editorial{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.editorial-image{aspect-ratio:4/3;background-size:cover;background-position:center;margin-bottom:22px}.editorial-card h2{font-size:27px;letter-spacing:-.03em;margin:14px 0 8px}.editorial-card p{color:#5d6160}.contact-page{min-height:100svh;display:grid;grid-template-columns:1fr 1fr}.contact-copy{padding:170px var(--pad) 80px;display:flex;flex-direction:column;justify-content:flex-end}.contact-page h1{max-width:8ch}.contact-page h2{font-size:clamp(38px,4vw,64px);color:var(--tiffany);margin:24px 0}.contact-page a{font-size:20px}.contact-photo{position:relative;background:url("/assets/images/contact/hero.webp") center/cover no-repeat}.notfound{min-height:100vh;display:grid;place-items:center}.notfound span{color:var(--tiffany)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}
+@media(max-width:980px){.site-header nav{display:none}.menu-btn{display:block;margin-left:auto}.brand-right{display:none}.hero,.inner-hero,.contact-page{grid-template-columns:1fr}.hero-copy,.inner-copy{min-height:68svh}.hero-photo,.inner-photo,.contact-photo{min-height:58svh}.split,.network{grid-template-columns:1fr}.service-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.thinking-grid,.editorial{grid-template-columns:1fr}.site-footer{grid-template-columns:1fr 1fr}.site-footer nav{display:none}}
+@media(max-width:620px){.site-header{height:70px}.hero-copy,.inner-copy,.contact-copy{padding-top:120px}.hero h1,.inner-copy h1,.contact-page h1{font-size:14.5vw}.section,.statement,.process,.network,.capabilities,.editorial{padding-left:20px;padding-right:20px}.service-grid,.process-grid{grid-template-columns:1fr}.service-card{min-height:330px}.studio-photo,.network-photo{min-height:440px}.section-head{align-items:flex-start;flex-direction:column}.site-footer{padding:40px 20px}.contact-cta{padding:90px 20px}.cap-row{grid-template-columns:48px 1fr}.cap-row.highlight{margin:0 -20px;padding-left:20px;padding-right:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ===== V13 ART DIRECTION ===== */
+.v13-note{position:absolute;z-index:2;left:30px;bottom:28px;font-size:10px;letter-spacing:.18em}.v13-bottom{display:flex;gap:22px;margin-top:34px;padding-top:17px;border-top:1px solid #ffffff3d;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.v13-accent{font-size:clamp(28px,3vw,48px)!important;color:var(--tiffany)!important;margin:25px 0 0!important;letter-spacing:-.04em}
+.v13-intro,.v13-method,.v13-network,.v13-caps,.v13-thinking,.v13-close{padding:clamp(90px,10vw,160px) var(--pad)}.v13-two{display:grid;grid-template-columns:1.25fr .75fr;gap:8vw;align-items:start}.v13-two>h2,.v13-network h2{font-size:clamp(54px,7vw,118px);line-height:.88;letter-spacing:-.065em;margin:0}.v13-two>p,.v13-side p,.v13-network p{font-size:16px;line-height:1.7;color:#545a59}.v13-side h3{font-size:clamp(28px,3vw,46px);line-height:1;letter-spacing:-.045em;margin:0 0 30px;color:#4d5352}
+.v13-methodhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:60px}.v13-methodhead h2{font-size:clamp(48px,6vw,96px);line-height:.9;letter-spacing:-.06em;margin:0}.v13-methodhead p{font-size:11px;letter-spacing:.14em;color:#9fa5a4}.v13-stack{border-top:1px solid #ffffff26}.v13-stack article{display:grid;grid-template-columns:70px .65fr 1fr auto;gap:35px;align-items:center;padding:38px 0;border-bottom:1px solid #ffffff26;transition:.35s}.v13-stack article:hover{padding-left:18px;padding-right:18px;background:#ffffff08}.v13-stack span,.v13-stack b,.v13-cap>span,.v13-cap>b,.v13-think span,.v13-think b{font-size:10px;letter-spacing:.16em}.v13-stack h3{font-size:clamp(34px,4vw,64px);letter-spacing:-.05em;margin:0}.v13-stack p{font-size:14px;line-height:1.5;color:#afb4b3}.v13-stack b{color:var(--tiffany)}
+.v13-network{display:grid;grid-template-columns:1.05fr .95fr;gap:7vw;align-items:center}.v13-networkimg{min-height:720px;background:url("/assets/images/studio/studio-v11.webp") 64% 48%/cover no-repeat}.v13-network h2{margin-bottom:32px}.v13-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:35px}.v13-tags span{border:1px solid #b9bcba;padding:9px 12px;font-size:9px;letter-spacing:.13em}.v13-close{background:var(--tiffany);color:#0b0d0e}.v13-close h2{font-size:clamp(52px,7vw,112px);line-height:.88;letter-spacing:-.065em;margin:70px 0 0;max-width:13ch}.v13-close>p{font-size:10px;letter-spacing:.17em}.darkclose{background:#0b0d0e;color:white}.darkclose .section-index{color:var(--tiffany)}
+.v13-caps{padding-top:0}.v13-cap{display:grid;grid-template-columns:80px 1fr auto;gap:35px;align-items:start;padding:48px 0;border-top:1px solid #c9cbc7;transition:.35s}.v13-cap:last-child{border-bottom:1px solid #c9cbc7}.v13-cap h2{font-size:clamp(42px,5.5vw,88px);line-height:.88;letter-spacing:-.06em;margin:0 0 18px}.v13-cap p{font-size:15px;line-height:1.6;color:#565b5a;max-width:650px}.v13-cap>b{padding-top:13px;color:#656b69}.v13-cap:hover{padding-left:14px}.v13-cap.core{background:#111516;color:white;margin:0 calc(var(--pad)*-1);padding:70px var(--pad);border:0}.v13-cap.core p{color:#c7cccb}.v13-cap.core>b{color:var(--tiffany)}.v13-cap.core .v13-tags span{border-color:#4a5150;color:#d4d8d7}
+.v13-thinking{padding-top:0}.v13-think{display:grid;grid-template-columns:1.08fr .92fr;min-height:640px;border-top:1px solid #c8cac6;padding:55px 0;gap:6vw;align-items:center}.v13-think.reverse{grid-template-columns:.92fr 1.08fr}.v13-think.reverse .v13-thinkimg{order:2}.v13-thinkimg{height:100%;min-height:520px;background:url("/assets/images/thinking/thinking-v11.webp") center/cover no-repeat;filter:saturate(.72) contrast(1.05)}.v13-thinkimg.a{background-position:28% 50%}.v13-thinkimg.b{background-position:55% 48%}.v13-thinkimg.c{background-position:78% 50%}.v13-think h2{font-size:clamp(42px,5.5vw,82px);line-height:.9;letter-spacing:-.055em;margin:24px 0}.v13-think h3{font-size:22px;line-height:1.2;margin:0 0 25px}.v13-think p{font-size:14px;line-height:1.65;color:#5e6462;max-width:500px}.v13-think b{display:block;margin-top:42px}
+@media(max-width:900px){.v13-two,.v13-network,.v13-think,.v13-think.reverse{grid-template-columns:1fr}.v13-think.reverse .v13-thinkimg{order:0}.v13-networkimg{min-height:520px}.v13-stack article{grid-template-columns:48px 1fr}.v13-stack article p,.v13-stack article b{grid-column:2}.v13-cap{grid-template-columns:48px 1fr}.v13-cap>b{grid-column:2}}
+@media(max-width:620px){.v13-intro,.v13-method,.v13-network,.v13-caps,.v13-thinking,.v13-close{padding-left:20px;padding-right:20px}.v13-methodhead{display:block}.v13-methodhead p{margin-top:20px}.v13-networkimg,.v13-thinkimg{min-height:420px}.v13-cap.core{margin:0 -20px;padding:55px 20px}.v13-bottom{flex-wrap:wrap;gap:12px}}
+
+
+/* =========================================================
+   GENERATION RACE V14 — PHOTOGRAPHIC IDENTITY
+   Visual masters built for the actual site containers
+   ========================================================= */
+.home-hero .hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.05),rgba(6,8,9,.02)),
+    linear-gradient(0deg,rgba(6,8,9,.30),transparent 40%),
+    url("/assets/images/v14/home-hero.webp") !important;
+  background-position:54% 50% !important;
+}
+.studio-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.16),transparent 40%),
+    url("/assets/images/v14/studio-hero.webp") !important;
+  background-position:60% 50% !important;
+}
+.what-hero-photo{
+  background-image:
+    linear-gradient(0deg,rgba(6,8,9,.18),transparent 42%),
+    url("/assets/images/v14/what-hero.webp") !important;
+  background-position:50% 44% !important;
+}
+.thinking-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.10),transparent 38%),
+    url("/assets/images/v14/thinking-hero.webp") !important;
+  background-position:52% 48% !important;
+}
+.contact-photo{
+  background-image:
+    linear-gradient(90deg,rgba(6,8,9,.18),transparent 42%),
+    url("/assets/images/v14/contact-hero.webp") !important;
+  background-position:64% 50% !important;
+}
+.v13-networkimg{
+  background-image:url("/assets/images/v14/studio-network.webp") !important;
+  background-position:56% 50% !important;
+}
+.v13-thinkimg.a{
+  background-image:url("/assets/images/v14/thinking-1.webp") !important;
+  background-position:46% 50% !important;
+}
+.v13-thinkimg.b{
+  background-image:url("/assets/images/v14/thinking-2.webp") !important;
+  background-position:50% 50% !important;
+}
+.v13-thinkimg.c{
+  background-image:url("/assets/images/v14/thinking-3.webp") !important;
+  background-position:56% 50% !important;
+}
+
+/* Home preview visual language aligned to the new masters */
+.studio-photo{
+  background-image:
+    linear-gradient(0deg,rgba(7,9,10,.10),transparent 45%),
+    url("/assets/images/v14/studio-hero.webp") !important;
+  background-position:58% 50% !important;
+}
+.thinking-image.untapped{
+  background-image:url("/assets/images/v14/thinking-1.webp") !important;
+}
+.thinking-image.signals{
+  background-image:url("/assets/images/v14/thinking-2.webp") !important;
+}
+.thinking-image.whatif{
+  background-image:url("/assets/images/v14/thinking-3.webp") !important;
+}
+@media(max-width:980px){
+  .home-hero .hero-photo{background-position:58% 50% !important}
+  .studio-hero-photo{background-position:62% 50% !important}
+  .what-hero-photo{background-position:50% 44% !important}
+  .thinking-hero-photo{background-position:54% 48% !important}
+  .contact-photo{background-position:64% 50% !important}
+}
+
+/* =========================================================
+   GR V15 — CONSOLIDATED / VISUAL BALANCE
+   ========================================================= */
+
+/* Home: photograph supports the statement rather than competing with it */
+.home-hero{grid-template-columns:1.10fr .90fr}
+.home-hero .hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(8,10,11,.16),rgba(8,10,11,.02) 48%),
+    linear-gradient(0deg,rgba(8,10,11,.34),transparent 48%),
+    url("/assets/images/v14/home-hero.webp") !important;
+  background-position:58% 50% !important;
+}
+.home-hero .hero-copy{position:relative;z-index:2}
+
+/* What We Do: reduce visual aggression, keep athletic energy */
+.what-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(8,10,11,.22),transparent 48%),
+    linear-gradient(0deg,rgba(8,10,11,.25),transparent 52%),
+    url("/assets/images/v14/what-hero.webp") !important;
+  background-position:54% 42% !important;
+  filter:saturate(.82);
+}
+
+/* Studio remains architectural and clean */
+.studio-hero-photo{
+  background-position:62% 50% !important;
+  filter:saturate(.88) contrast(1.02);
+}
+
+/* Thinking can be more intimate, but keep editorial legibility */
+.thinking-hero-photo{
+  background-position:50% 48% !important;
+  filter:saturate(.80) contrast(1.03);
+}
+
+/* Contact is deliberately quieter */
+.contact-photo{
+  background-position:68% 50% !important;
+  filter:saturate(.86);
+}
+
+/* Stronger hierarchy on internal pages */
+.inner-copy .eyebrow{margin-bottom:28px}
+.v13-intro{border-bottom:1px solid #d3d4d0}
+.v13-cap.core{box-shadow:inset 0 1px 0 rgba(129,216,208,.45),inset 0 -1px 0 rgba(129,216,208,.45)}
+.v13-think{overflow:hidden}
+.v13-thinkimg{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+@media(hover:hover){.v13-think:hover .v13-thinkimg{transform:scale(1.018)}}
+
+/* Mobile: imagery becomes a deliberate second beat, not a cramped desktop crop */
+@media(max-width:980px){
+  .home-hero{grid-template-columns:1fr}
+  .home-hero .hero-photo{min-height:62svh;background-position:60% 50%!important}
+  .studio-hero-photo{background-position:66% 50%!important}
+  .what-hero-photo{background-position:52% 40%!important}
+  .thinking-hero-photo{background-position:52% 48%!important}
+  .contact-photo{background-position:70% 50%!important}
+}
+@media(max-width:620px){
+  .home-hero .hero-photo{min-height:54svh}
+  .v13-note{left:20px;bottom:20px}
+  .v13-two>h2{font-size:14vw}
+  .v13-think{padding:42px 0}
+}
+
+/* GR V16 clean internal pages */
+.build-marker{position:fixed;right:8px;bottom:6px;z-index:9999;font:600 8px/1 Montserrat,sans-serif;letter-spacing:.16em;color:rgba(129,216,208,.34);pointer-events:none}
+.v16-hero .inner-copy h1 span,.v16-network h2 span,.v16-closing h2 span{color:#81d8d0}
+.v16-process,.v16-capabilities,.v16-thinking{padding:0 5vw}
+.section-kicker{display:flex;justify-content:space-between;padding:30px 0;border-bottom:1px solid rgba(0,0,0,.2);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.v16-step{display:grid;grid-template-columns:70px 1.1fr .7fr 1fr;gap:24px;align-items:center;padding:44px 0;border-bottom:1px solid rgba(0,0,0,.18)}
+.v16-step h2{font-size:clamp(42px,6vw,88px);margin:0}.v16-step p{margin:0}.step-signal{font-size:12px;letter-spacing:.14em}
+.v16-network{display:grid;grid-template-columns:1fr 1fr;min-height:78vh;background:#0a0b0c;color:#f2f0e9}
+.v16-network>div:first-child{padding:8vw 6vw}.v16-network h2{font-size:clamp(56px,8vw,118px);line-height:.88;margin:30px 0}
+.v16-closing{padding:12vw 5vw;background:#0a0b0c;color:#f2f0e9}.v16-closing p{text-transform:uppercase;letter-spacing:.14em;font-size:12px}.v16-closing h2{font-size:clamp(58px,10vw,150px);line-height:.88;margin:30px 0 0}
+.v16-capabilities .v13-cap{display:grid;grid-template-columns:150px 1fr 1fr;gap:30px;padding:55px 0;border-bottom:1px solid rgba(0,0,0,.18)}.v16-capabilities .v13-cap h2{font-size:clamp(34px,4.2vw,68px);margin:0}.v16-capabilities .core{background:#0a0b0c;color:#f2f0e9;margin:0 -5vw;padding:70px 5vw}.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.tag-row span{border:1px solid currentColor;border-radius:99px;padding:8px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.v16-thinking .v13-think{display:grid;grid-template-columns:.8fr 1.2fr;min-height:70vh;border-bottom:1px solid rgba(0,0,0,.18)}.v16-thinking .v13-think>div:last-child{padding:7vw 6vw}.v16-thinking .v13-think h2{font-size:clamp(44px,6vw,90px);line-height:.94}.v16-thinking .v13-think a{display:inline-block;margin-top:40px;color:inherit;text-decoration:none;font-size:12px;letter-spacing:.12em}
+@media(max-width:900px){
+ .v16-step,.v16-capabilities .v13-cap,.v16-thinking .v13-think,.v16-network{grid-template-columns:1fr}
+ .v16-step{gap:12px}.v16-networkimg,.v13-thinkimg{min-height:52svh}
+ .v16-capabilities .core{margin:0 -5vw}
+}
+
+/* GR V17 — About Us + Portfolio */
+.v17-hero-sub{max-width:520px;margin-top:34px;font-size:clamp(16px,1.4vw,21px);line-height:1.5}
+.v17-placeholder{padding:10vw 5vw}
+.v17-placeholder-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;margin-top:42px}
+.v17-placeholder-grid h2{font-size:clamp(54px,8vw,120px);line-height:.9;margin:0}
+.v17-lead{font-size:clamp(22px,2.3vw,36px);line-height:1.25;margin-top:0}
+.v17-note{margin-top:70px;font-size:11px;letter-spacing:.16em;color:#6e7775}
+.v17-project-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:0 5vw 10vw;gap:1px}
+.v17-project-grid>div{min-height:32vw;background:#111315;color:#f1efe8;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.v17-project-grid span{color:#81d8d0;font-size:12px}.v17-project-grid p{font-size:12px;letter-spacing:.14em}
+@media(max-width:900px){.v17-placeholder-grid,.v17-project-grid{grid-template-columns:1fr}.v17-project-grid>div{min-height:60vw}}
+
+/* GR V18 — curated IT / EN language switch */
+.lang-switch{display:flex;align-items:center;gap:6px;font:600 10px/1 Montserrat,sans-serif;letter-spacing:.14em;white-space:nowrap;margin-left:auto;margin-right:18px}.lang-switch button{appearance:none;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;padding:6px 2px;cursor:pointer;opacity:.42;transition:opacity .2s ease,color .2s ease}.lang-switch button:hover,.lang-switch button.active{opacity:1}.lang-switch button.active{color:#81d8d0}.lang-switch span{opacity:.28}.inner-header .lang-switch{margin-left:18px}@media(max-width:980px){.lang-switch{margin-left:auto;margin-right:12px;font-size:9px;gap:4px}}
+
+
+/* =========================================================
+   GR V19 — LANGUAGE REFINEMENT + CORE TAG LAYOUT
+   ========================================================= */
+
+/* Studio traits */
+.studio-traits{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.studio-traits i{
+  font-style:normal;
+  opacity:.42;
+}
+
+/* Formats & Properties: tags occupy the wide content area horizontally */
+.v16-capabilities .core .tag-row{
+  grid-column:2 / -1;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:8px;
+}
+.v16-capabilities .core .tag-row span{
+  display:inline-flex;
+  align-items:center;
+  width:auto;
+  white-space:nowrap;
+  padding:10px 15px;
+}
+
+@media(max-width:900px){
+  .v16-capabilities .core .tag-row{
+    grid-column:1;
+    margin-top:14px;
+  }
+}
+
+
+/* GR V20 — clean header + complete mobile navigation */
+.menu-toggle{display:none!important}
+
+@media(min-width:981px){
+  .desktop-nav{display:flex;align-items:center}
+}
+
+@media(max-width:980px){
+  .site-header{
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-areas:"brand language" "nav nav";
+    align-items:center;
+    height:auto;
+    min-height:0;
+    padding:14px 16px 0;
+  }
+  .site-header .brand{
+    grid-area:brand;
+    position:static;
+    justify-self:start;
+    margin:0;
+  }
+  .site-header .lang-switch{
+    grid-area:language;
+    position:static;
+    justify-self:end;
+    margin:0;
+  }
+  .site-header .desktop-nav{
+    grid-area:nav;
+    display:flex!important;
+    width:calc(100% + 32px);
+    margin:12px -16px 0;
+    padding:11px 16px 12px;
+    gap:22px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    border-top:1px solid rgba(128,128,128,.16);
+  }
+  .site-header .desktop-nav::-webkit-scrollbar{display:none}
+  .site-header .desktop-nav a{
+    flex:0 0 auto;
+    display:block;
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  .site-header .desktop-nav a.active{color:#81d8d0}
+}
+
+
+/* =========================================================
+   GR V21 — MOBILE NAVIGATION FIX
+   Home and Contact now use the same navigation system as all internal pages
+   ========================================================= */
+
+.menu-btn,
+.menu-toggle{
+  display:none!important;
+}
+
+@media(max-width:980px){
+  /* override legacy rules that hid nav and right-side brand */
+  .site-header nav.desktop-nav{
+    grid-area:nav;
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:calc(100% + 32px);
+    max-width:none;
+    margin:12px -16px 0;
+    padding:11px 16px 12px;
+    gap:22px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    border-top:1px solid rgba(128,128,128,.16);
+  }
+
+  .site-header nav.desktop-nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .site-header nav.desktop-nav a{
+    display:block!important;
+    flex:0 0 auto;
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+
+  .site-header .brand.brand-right{
+    display:block!important;
+    grid-area:brand;
+    position:static;
+    justify-self:start;
+  }
+
+  /* Contact has both the compact GR mark and full brand. Keep only full brand on mobile */
+  .site-header.inner-header .brand-mark{
+    display:none!important;
+  }
+
+  .site-header.inner-header .brand-right{
+    display:block!important;
+  }
+}
+
+
+/* =========================================================
+   GR V22 — SERVICE PHOTOGRAPHY
+   Approved individual visual system for the 7 Home service cards
+   ========================================================= */
+
+.service-card.strategy:before{
+  background-image:url("/assets/images/services/v22/strategy.webp");
+  background-position:50% 50%;
+}
+.service-card.sponsorship:before{
+  background-image:url("/assets/images/services/v22/sponsorship.webp");
+  background-position:50% 48%;
+}
+.service-card.formats:before{
+  background-image:url("/assets/images/services/v22/formats.webp");
+  background-position:50% 50%;
+}
+.service-card.activation:before{
+  background-image:url("/assets/images/services/v22/activation.webp");
+  background-position:50% 50%;
+}
+.service-card.events:before{
+  background-image:url("/assets/images/services/v22/events.webp");
+  background-position:50% 48%;
+}
+.service-card.content:before{
+  background-image:url("/assets/images/services/v22/content.webp");
+  background-position:50% 50%;
+}
+.service-card.business:before{
+  background-image:url("/assets/images/services/v22/business.webp");
+  background-position:55% 50%;
+}
+
+/* Mobile cards become wider than desktop. Keep the important visual action in frame. */
+@media(max-width:620px){
+  .service-card.strategy:before{background-position:50% 44%}
+  .service-card.sponsorship:before{background-position:50% 44%}
+  .service-card.formats:before{background-position:50% 50%}
+  .service-card.activation:before{background-position:50% 46%}
+  .service-card.events:before{background-position:50% 42%}
+  .service-card.content:before{background-position:50% 48%}
+  .service-card.business:before{background-position:55% 50%}
+}
+
+
+/* =========================================================
+   GR V23 — HOME / THINKING PHOTOGRAPHY
+   4:3 crops calibrated for the three Home editorial cards
+   ========================================================= */
+.thinking-image.untapped{
+  background-position:50% 50%;
+}
+.thinking-image.signals{
+  background-position:50% 44%;
+}
+.thinking-image.whatif{
+  background-position:50% 50%;
+}
+
+@media(max-width:700px){
+  .thinking-image.untapped{background-position:50% 48%}
+  .thinking-image.signals{background-position:50% 42%}
+  .thinking-image.whatif{background-position:50% 48%}
+}
+
+
+/* =========================================================
+   GR V24 — DEFINITIVE HOME THINKING IMAGE OVERRIDE
+   Must remain last: supersedes legacy V14 !important rules
+   ========================================================= */
+body .thinking-image.untapped{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 50% !important;
+}
+body .thinking-image.signals{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 44% !important;
+}
+body .thinking-image.whatif{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+}
+@media(max-width:700px){
+  body .thinking-image.untapped{background-position:50% 48% !important}
+  body .thinking-image.signals{background-position:50% 42% !important}
+  body .thinking-image.whatif{background-position:50% 48% !important}
+}
+
+
+/* =========================================================
+   GR V25 — THINKING PAGE PHOTOGRAPHY
+   Same approved 4:3 imagery as Home; hero/first photo untouched
+   ========================================================= */
+body .editorial-image.untapped{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 50% !important;
+}
+body .editorial-image.signals{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 44% !important;
+}
+body .editorial-image.whatif{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+}
+
+@media(max-width:700px){
+  body .editorial-image.untapped{background-position:50% 48% !important}
+  body .editorial-image.signals{background-position:50% 42% !important}
+  body .editorial-image.whatif{background-position:50% 48% !important}
+}
+
+
+/* =========================================================
+   GR V26 — THINKING PAGE / CORRECT IMAGE TARGETS
+   Actual page classes: .v13-thinkimg.a / .b / .c
+   Hero photo remains untouched.
+   ========================================================= */
+
+.v16-thinking .v13-thinkimg.a{
+  background-image:url("/assets/images/home-thinking/v23/untapped.webp") !important;
+  background-position:50% 48% !important;
+  background-size:cover !important;
+}
+
+.v16-thinking .v13-thinkimg.b{
+  background-image:url("/assets/images/home-thinking/v23/signals.webp") !important;
+  background-position:50% 42% !important;
+  background-size:cover !important;
+}
+
+.v16-thinking .v13-thinkimg.c{
+  background-image:url("/assets/images/home-thinking/v23/what-if.webp") !important;
+  background-position:50% 50% !important;
+  background-size:cover !important;
+}
+
+/* Tablet/mobile: the image block becomes full-width and shorter.
+   Recenter on the meaningful visual action. */
+@media(max-width:900px){
+  .v16-thinking .v13-thinkimg.a{background-position:50% 50% !important}
+  .v16-thinking .v13-thinkimg.b{background-position:50% 44% !important}
+  .v16-thinking .v13-thinkimg.c{background-position:50% 48% !important}
+}
+
+/* GR V27 — ABOUT US */
+.about-hero-photo{background-image:linear-gradient(90deg,rgba(6,8,9,.12),transparent 48%),url("/assets/images/about/v27/about-hero.webp")!important;background-size:cover!important;background-position:62% 50%!important}
+.founder-profile{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:7vw;padding:8vw 5vw 10vw;align-items:start;background:#f2f0e9;color:#0a0b0c;border-top:1px solid rgba(0,0,0,.18)}
+.founder-photo{width:100%;aspect-ratio:4/5;background:url("/assets/images/about/v27/alessandro-bellin.webp") center 42%/cover no-repeat;filter:saturate(.78) contrast(1.04)}
+.founder-copy{padding-top:1vw}.founder-copy h2{font-size:clamp(54px,7vw,108px);line-height:.88;letter-spacing:-.055em;margin:20px 0 14px}.founder-role{margin:0 0 48px;font-size:15px;text-transform:uppercase;letter-spacing:.12em}
+.founder-bio{max-width:720px;border-top:1px solid rgba(0,0,0,.2);padding-top:30px}.founder-bio p{font-size:16px;line-height:1.7;margin:0 0 20px;color:#3f4543}
+.founder-manifesto{font-size:clamp(25px,3vw,42px);line-height:1.08;letter-spacing:-.03em;margin:50px 0 34px;max-width:760px}
+.founder-tags{display:flex;flex-wrap:wrap;gap:8px}.founder-tags span{border:1px solid currentColor;border-radius:999px;padding:9px 13px;font-size:10px;letter-spacing:.08em;white-space:nowrap}
+@media(max-width:900px){.about-hero-photo{background-position:58% 50%!important}.founder-profile{grid-template-columns:1fr;gap:42px;padding:70px 20px 80px}.founder-photo{max-height:78svh;background-position:center 38%}.founder-copy h2{font-size:clamp(52px,14vw,82px)}.founder-role{margin-bottom:34px}}
+
+/* =========================================================
+   GR V28 — PORTFOLIO PROJECT GRID
+   ========================================================= */
+.portfolio-intro{
+  padding:8vw 5vw 6vw;
+  background:#f2f0e9;
+  color:#0a0b0c;
+  border-bottom:1px solid rgba(0,0,0,.18)
+}
+.portfolio-intro h2{
+  font-size:clamp(60px,8.8vw,142px);
+  line-height:.84;
+  letter-spacing:-.06em;
+  margin:24px 0 34px
+}
+.portfolio-lead{max-width:620px;font-size:18px;line-height:1.55;color:#4b504e}
+.project-grid{background:#0a0b0c}
+.project-card{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
+  min-height:78svh;
+  border-bottom:1px solid rgba(255,255,255,.16)
+}
+.project-card:nth-child(even){grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr)}
+.project-card:nth-child(even) .project-visual{order:2}
+.project-card:nth-child(even) .project-info{order:1}
+.project-visual{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden
+}
+.project-strikers .project-visual{background:#070809;padding:8vw}
+.project-strikers .project-visual img{width:min(90%,850px);height:auto;object-fit:contain}
+.project-352 .project-visual{background:#ef7300;padding:0}
+.project-352 .project-visual img{width:100%;height:100%;object-fit:cover}
+.project-info{
+  padding:6vw 5vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:#f2f0e9;
+  color:#0a0b0c
+}
+.project-number{font-size:12px;letter-spacing:.12em;margin:0 0 20px}
+.project-tags{
+  max-width:660px;
+  font-size:11px;
+  line-height:1.55;
+  letter-spacing:.08em;
+  padding:14px 0;
+  border-top:1px solid rgba(0,0,0,.28);
+  border-bottom:1px solid rgba(0,0,0,.28);
+  margin-bottom:34px
+}
+.project-info>p:last-child{max-width:680px;font-size:18px;line-height:1.6;margin:0;color:#3f4543}
+@media(max-width:900px){
+  .portfolio-intro{padding:80px 20px 65px}
+  .portfolio-intro h2{font-size:clamp(55px,16vw,92px)}
+  .project-card,.project-card:nth-child(even){grid-template-columns:1fr;min-height:auto}
+  .project-card:nth-child(even) .project-visual,.project-card:nth-child(even) .project-info{order:initial}
+  .project-visual{min-height:56svh}
+  .project-strikers .project-visual{padding:70px 28px}
+  .project-info{padding:55px 20px 70px}
+  .project-info>p:last-child{font-size:16px}
+}
+
+
+/* =========================================================
+   GR V29 — FINAL VISUAL REFINEMENTS
+   ========================================================= */
+
+/* HOME — keep black band, make label legible in GR Tiffany */
+.studio-preview .eyebrow.dark{
+  background:#0a0b0c !important;
+  color:#81D8D0 !important;
+}
+
+/* PORTFOLIO — more breathing room around project identities */
+.project-strikers .project-visual{
+  padding:10vw !important;
+}
+.project-strikers .project-visual img{
+  width:min(68%,650px) !important;
+  max-height:48% !important;
+  object-fit:contain !important;
+}
+.project-352 .project-visual{
+  padding:8% !important;
+  background:#ef7300 !important;
+}
+.project-352 .project-visual img{
+  width:72% !important;
+  height:72% !important;
+  object-fit:contain !important;
+}
+
+/* STUDIO — second image only. First/hero image intentionally unchanged.
+   Desktop focal point keeps moodboard + Turin window balanced. */
+.v16-network .v13-networkimg{
+  background-image:url("/assets/images/studio/v29/studio-network.webp") !important;
+  background-size:cover !important;
+  background-position:54% 50% !important;
+  filter:saturate(.78) contrast(1.04);
+}
+
+/* Tablet crop: retain central strategy wall and part of skyline */
+@media(max-width:980px){
+  .v16-network .v13-networkimg{
+    min-height:560px;
+    background-position:58% 50% !important;
+  }
+  .project-strikers .project-visual{padding:90px 44px !important}
+  .project-strikers .project-visual img{width:min(72%,600px) !important;max-height:none !important}
+  .project-352 .project-visual{padding:9% !important}
+  .project-352 .project-visual img{width:70% !important;height:70% !important}
+}
+
+/* Mobile crop: portrait-like viewport, prioritize moodboard/desk rather than empty window */
+@media(max-width:620px){
+  .v16-network .v13-networkimg{
+    min-height:480px !important;
+    background-position:42% 50% !important;
+  }
+  .project-strikers .project-visual{
+    min-height:48svh !important;
+    padding:72px 34px !important;
+  }
+  .project-strikers .project-visual img{
+    width:74% !important;
+    max-width:500px !important;
+  }
+  .project-352 .project-visual{
+    min-height:52svh !important;
+    padding:12% !important;
+  }
+  .project-352 .project-visual img{
+    width:72% !important;
+    height:72% !important;
+  }
+}
+
+
+/* =========================================================
+   GR V30 — PORTFOLIO HERO / RESPONSIVE ART DIRECTION
+   ========================================================= */
+
+/* Desktop: preserve panoramic depth and moving figure */
+.portfolio-hero-photo{
+  background-image:
+    linear-gradient(90deg,rgba(5,7,8,.08),rgba(5,7,8,.02)),
+    url("/assets/images/portfolio/v30/portfolio-hero-desktop.webp") !important;
+  background-size:cover !important;
+  background-position:53% 50% !important;
+}
+
+/* Tablet: tighter crop while keeping the moving figure and key hanging visuals */
+@media(max-width:1100px){
+  .portfolio-hero-photo{
+    background-image:
+      linear-gradient(90deg,rgba(5,7,8,.08),rgba(5,7,8,.02)),
+      url("/assets/images/portfolio/v30/portfolio-hero-tablet.webp") !important;
+    background-position:56% 50% !important;
+  }
+}
+
+/* Mobile: dedicated portrait crop, centered on motion + sport imagery */
+@media(max-width:700px){
+  .portfolio-hero-photo{
+    min-height:58svh !important;
+    background-image:
+      linear-gradient(180deg,rgba(5,7,8,.03),rgba(5,7,8,.10)),
+      url("/assets/images/portfolio/v30/portfolio-hero-mobile.webp") !important;
+    background-position:57% 50% !important;
+  }
+}
+
+
+/* =========================================================
+   GR V31 — PORTFOLIO HERO HARD FIX
+   Uses a real responsive <picture>, not a legacy background.
+   ========================================================= */
+.portfolio-hero-v31{
+  position:relative;
+  overflow:hidden;
+  background:#080a0b !important;
+}
+.portfolio-hero-v31 .portfolio-hero-picture{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+}
+.portfolio-hero-v31 .portfolio-hero-picture img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:53% 50%;
+}
+.portfolio-hero-v31:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,7,8,.08),rgba(5,7,8,.02));
+}
+@media(max-width:1100px){
+  .portfolio-hero-v31 .portfolio-hero-picture img{
+    object-position:56% 50%;
+  }
+}
+@media(max-width:700px){
+  .portfolio-hero-v31{
+    min-height:58svh !important;
+  }
+  .portfolio-hero-v31 .portfolio-hero-picture img{
+    object-position:57% 50%;
+  }
+  .portfolio-hero-v31:after{
+    background:linear-gradient(180deg,rgba(5,7,8,.03),rgba(5,7,8,.10));
+  }
+}
+
+/* V32 — privacy consent */
+.gr-consent{position:fixed;left:20px;right:20px;bottom:20px;z-index:9999;max-width:760px;margin:auto;background:#0a0b0c;color:#fff;border:1px solid rgba(255,255,255,.16);padding:18px 20px;display:flex;gap:18px;align-items:center;justify-content:space-between;font-size:12px;line-height:1.55;box-shadow:0 16px 50px rgba(0,0,0,.28)}.gr-consent[hidden]{display:none}.gr-consent p{margin:0}.gr-consent a{color:#81D8D0}.gr-consent-actions{display:flex;gap:8px;flex:0 0 auto}.gr-consent button{font:inherit;text-transform:uppercase;letter-spacing:.08em;padding:10px 13px;border:1px solid #81D8D0;cursor:pointer}.gr-consent-accept{background:#81D8D0;color:#0a0b0c}.gr-consent-decline{background:transparent;color:#fff}@media(max-width:700px){.gr-consent{left:10px;right:10px;bottom:10px;display:block}.gr-consent-actions{margin-top:14px}.gr-consent button{flex:1}}

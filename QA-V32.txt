@@ -1,0 +1,12 @@
+GR V32 QA — SEO + Analytics
+index.html: GA=True canonical=True css=True js=True
+studio.html: GA=True canonical=True css=True js=True
+about-us.html: GA=True canonical=True css=True js=True
+portfolio.html: GA=True canonical=True css=True js=True
+what-we-do.html: GA=True canonical=True css=True js=True
+thinking.html: GA=True canonical=True css=True js=True
+contact.html: GA=True canonical=True css=True js=True
+privacy.html: GA=True canonical=True css=True js=True
+robots.txt=True
+sitemap.xml=True
+privacy.html=True
