@@ -23,4 +23,29 @@
   document.querySelectorAll('.lang-switch button[data-lang]').forEach(btn => btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)))
   const saved=localStorage.getItem(KEY); setLanguage(valid.has(saved)?saved:'en')
 })()
-\n\n// V32 analytics consent + conversion events\n(() => {\n  const CONSENT_KEY='gr-analytics-consent';\n  const setConsent=(granted)=>{\n    if(typeof gtag==='function') gtag('consent','update',{analytics_storage:granted?'granted':'denied'});\n    localStorage.setItem(CONSENT_KEY,granted?'granted':'denied');\n  };\n  const existing=localStorage.getItem(CONSENT_KEY);\n  if(existing==='granted' && typeof gtag==='function') gtag('consent','update',{analytics_storage:'granted'});\n  if(!existing){\n    const box=document.createElement('div'); box.className='gr-consent'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Analytics preferences');\n    box.innerHTML='<p><strong>Analytics</strong><br>We use Google Analytics to understand how the site is used and improve it. <a href="/privacy.html">Privacy</a></p><div class="gr-consent-actions"><button class="gr-consent-decline" type="button">Decline</button><button class="gr-consent-accept" type="button">Accept</button></div>';\n    document.body.appendChild(box);\n    box.querySelector('.gr-consent-accept').addEventListener('click',()=>{setConsent(true);box.remove()});\n    box.querySelector('.gr-consent-decline').addEventListener('click',()=>{setConsent(false);box.remove()});\n  }\n  const track=(name,params={})=>{if(typeof gtag==='function')gtag('event',name,params)};\n  document.addEventListener('click',e=>{\n    const a=e.target.closest('a'); if(!a)return; const href=a.getAttribute('href')||'';\n    if(href.startsWith('mailto:')) track('contact_click',{method:'email',link_url:href});\n    if(href.includes('portfolio.html')) track('portfolio_click',{link_url:href});\n    if(href.includes('contact.html')) track('contact_page_click',{link_url:href});\n  });\n})();\n
+
+
+// V32 analytics consent + conversion events
+(() => {
+  const CONSENT_KEY='gr-analytics-consent';
+  const setConsent=(granted)=>{
+    if(typeof gtag==='function') gtag('consent','update',{analytics_storage:granted?'granted':'denied'});
+    localStorage.setItem(CONSENT_KEY,granted?'granted':'denied');
+  };
+  const existing=localStorage.getItem(CONSENT_KEY);
+  if(existing==='granted' && typeof gtag==='function') gtag('consent','update',{analytics_storage:'granted'});
+  if(!existing){
+    const box=document.createElement('div'); box.className='gr-consent'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Analytics preferences');
+    box.innerHTML='<p><strong>Analytics</strong><br>We use Google Analytics to understand how the site is used and improve it. <a href="/privacy.html">Privacy</a></p><div class="gr-consent-actions"><button class="gr-consent-decline" type="button">Decline</button><button class="gr-consent-accept" type="button">Accept</button></div>';
+    document.body.appendChild(box);
+    box.querySelector('.gr-consent-accept').addEventListener('click',()=>{setConsent(true);box.remove()});
+    box.querySelector('.gr-consent-decline').addEventListener('click',()=>{setConsent(false);box.remove()});
+  }
+  const track=(name,params={})=>{if(typeof gtag==='function')gtag('event',name,params)};
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a'); if(!a)return; const href=a.getAttribute('href')||'';
+    if(href.startsWith('mailto:')) track('contact_click',{method:'email',link_url:href});
+    if(href.includes('portfolio.html')) track('portfolio_click',{link_url:href});
+    if(href.includes('contact.html')) track('contact_page_click',{link_url:href});
+  });
+})();
