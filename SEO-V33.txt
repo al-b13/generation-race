@@ -1,0 +1,23 @@
+GENERATION RACE — V33 SEO ARCHITECTURE
+
+Scope: institutional pages only. Thinking remains frozen/noindex until editorial articles are ready.
+
+Keyword map
+Home: Sport & Entertainment Boutique Studio / strategy
+Studio: Sport Strategy & Business Consulting
+About Us: Generation Race / founder / multidisciplinary sport & entertainment studio
+Portfolio: Sport & Entertainment Projects
+What We Do: Sport Business / Sponsorship / Formats & Properties
+Contact: Sport & Entertainment Consulting
+
+Technical changes
+- Unique page titles and meta descriptions
+- Canonicals preserved
+- Open Graph/Twitter metadata aligned per page
+- og:image:alt and locale added
+- Schema.org graph: Organization + WebSite + page type
+- Thinking and Privacy set noindex,follow
+- Sitemap limited to indexable institutional pages, lastmod updated
+- Existing GA4, consent, CSS, JS, animations and visible copy intentionally untouched
+
+Future: when Thinking articles are ready, create indexable article URLs and Article schema, then add them to sitemap.

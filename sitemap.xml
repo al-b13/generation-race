@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://generationrace.com/</loc></url>
-  <url><loc>https://generationrace.com/studio.html</loc></url>
-  <url><loc>https://generationrace.com/about-us.html</loc></url>
-  <url><loc>https://generationrace.com/portfolio.html</loc></url>
-  <url><loc>https://generationrace.com/what-we-do.html</loc></url>
-  <url><loc>https://generationrace.com/thinking.html</loc></url>
-  <url><loc>https://generationrace.com/contact.html</loc></url>
-  <url><loc>https://generationrace.com/privacy.html</loc></url>
+  <url><loc>https://generationrace.com/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://generationrace.com/studio.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://generationrace.com/about-us.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://generationrace.com/portfolio.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://generationrace.com/what-we-do.html</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://generationrace.com/contact.html</loc><lastmod>2026-09-16</lastmod></url>
 </urlset>
